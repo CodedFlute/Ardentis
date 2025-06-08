@@ -1,0 +1,329 @@
+\doxysection{ard\+Sensors Class Reference}
+\hypertarget{classard_sensors}{}\label{classard_sensors}\index{ardSensors@{ardSensors}}
+
+
+\doxylink{classard_sensors}{ard\+Sensors} class to manage sensor data acquisition and processing  
+
+
+
+
+{\ttfamily \#include $<$ard\+\_\+sensor.\+h$>$}
+
+
+
+Collaboration diagram for ard\+Sensors\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classard_sensors__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classard_sensors_a65d6574f176aede45cf78721ddae7dc5}{ard\+Sensors}} (gpio\+\_\+num\+\_\+t sda, gpio\+\_\+num\+\_\+t scl, int i2c, int gps\+\_\+uart\+\_\+num, gpio\+\_\+num\+\_\+t gps\+\_\+tx, gpio\+\_\+num\+\_\+t gps\+\_\+rx)
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classard_sensors_af8da5ef8f7232141c86709f8613ad1a3}{init\+Sensors}} (int LIS331\+\_\+addr, int imu\+\_\+adr, int baro\+\_\+addr, int gps\+\_\+baud)
+\begin{DoxyCompactList}\small\item\em Initialize the sensors. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classard_sensors_adde38a01a9aa9d62d563f1b64b38d28d}{update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classard_sensors_afc9ad74a824c1625db97c8f7313c1ffd}\label{classard_sensors_afc9ad74a824c1625db97c8f7313c1ffd} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries accelX}
+\item 
+\Hypertarget{classard_sensors_a451536eeedb2d6310750620d873cad84}\label{classard_sensors_a451536eeedb2d6310750620d873cad84} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries accelY}
+\item 
+\Hypertarget{classard_sensors_a66bdb61dba9d6e7476fbf7c9693c27c8}\label{classard_sensors_a66bdb61dba9d6e7476fbf7c9693c27c8} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries accelZ}
+\item 
+\Hypertarget{classard_sensors_a36b942bdc90596239cbb467f28b75f30}\label{classard_sensors_a36b942bdc90596239cbb467f28b75f30} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries gyroX}
+\item 
+\Hypertarget{classard_sensors_ac2497bd1b5ad92fad8bd464ddfaf57dc}\label{classard_sensors_ac2497bd1b5ad92fad8bd464ddfaf57dc} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries gyroY}
+\item 
+\Hypertarget{classard_sensors_adc1e1fb0cb0d72a3e1c4802b0b23d9a4}\label{classard_sensors_adc1e1fb0cb0d72a3e1c4802b0b23d9a4} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries gyroZ}
+\item 
+\Hypertarget{classard_sensors_a99ca1566c69eaa1deb0432b169547ebe}\label{classard_sensors_a99ca1566c69eaa1deb0432b169547ebe} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries high\+AccelX}
+\item 
+\Hypertarget{classard_sensors_a16be8a496d4f1e9486461a51c7352ee6}\label{classard_sensors_a16be8a496d4f1e9486461a51c7352ee6} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries high\+AccelY}
+\item 
+\Hypertarget{classard_sensors_ae5bd82b133ee5b7fc7ca319c80f86120}\label{classard_sensors_ae5bd82b133ee5b7fc7ca319c80f86120} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries high\+AccelZ}
+\item 
+\Hypertarget{classard_sensors_a7a68291c821ecf439f2c85ca7eb78968}\label{classard_sensors_a7a68291c821ecf439f2c85ca7eb78968} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries pressure}
+\item 
+\Hypertarget{classard_sensors_a722368a404e56871c52a18ded4092716}\label{classard_sensors_a722368a404e56871c52a18ded4092716} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries altitude}
+\item 
+\Hypertarget{classard_sensors_a1613722d3627b9c1a1a958e6d2f36e2f}\label{classard_sensors_a1613722d3627b9c1a1a958e6d2f36e2f} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries temperature}
+\item 
+\Hypertarget{classard_sensors_ad59622c71af598f7186669d28adf34d5}\label{classard_sensors_ad59622c71af598f7186669d28adf34d5} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries latitude}
+\item 
+\Hypertarget{classard_sensors_ac304e1ccd49e7f54c7387ff57e410f3b}\label{classard_sensors_ac304e1ccd49e7f54c7387ff57e410f3b} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries longitude}
+\item 
+\Hypertarget{classard_sensors_a6dc8e0c4457b4128c3bf79ab272e30eb}\label{classard_sensors_a6dc8e0c4457b4128c3bf79ab272e30eb} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries horiz\+Accuracy}
+\item 
+\Hypertarget{classard_sensors_a67a9d870b931cf3c88ee6b1767b1684f}\label{classard_sensors_a67a9d870b931cf3c88ee6b1767b1684f} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries vert\+Accuracy}
+\item 
+\Hypertarget{classard_sensors_a26f2e4215c6abed5311931c492a2daa7}\label{classard_sensors_a26f2e4215c6abed5311931c492a2daa7} 
+\mbox{\hyperlink{structard_data_field}{ard\+Data\+Field}} {\bfseries gps\+\_\+altitude}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classard_sensors}{ard\+Sensors} class to manage sensor data acquisition and processing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sda} & GPIO pin for I2C SDA \\
+\hline
+{\em scl} & GPIO pin for I2C SCL \\
+\hline
+{\em i2c} & I2C bus number \\
+\hline
+{\em gps\+\_\+uart\+\_\+num} & UART number for GPS \\
+\hline
+{\em gps\+\_\+tx} & GPIO pin for GPS TX \\
+\hline
+{\em gps\+\_\+rx} & GPIO pin for GPS RX \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classard_sensors_a65d6574f176aede45cf78721ddae7dc5}\index{ardSensors@{ardSensors}!ardSensors@{ardSensors}}
+\index{ardSensors@{ardSensors}!ardSensors@{ardSensors}}
+\doxysubsubsection{\texorpdfstring{ardSensors()}{ardSensors()}}
+{\footnotesize\ttfamily \label{classard_sensors_a65d6574f176aede45cf78721ddae7dc5} 
+ard\+Sensors\+::ard\+Sensors (\begin{DoxyParamCaption}\item[{gpio\+\_\+num\+\_\+t}]{sda}{, }\item[{gpio\+\_\+num\+\_\+t}]{scl}{, }\item[{int}]{i2c}{, }\item[{int}]{gps\+\_\+uart\+\_\+num}{, }\item[{gpio\+\_\+num\+\_\+t}]{gps\+\_\+tx}{, }\item[{gpio\+\_\+num\+\_\+t}]{gps\+\_\+rx}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ gps\_uart\ =\ HardwareSerial(gps\_uart\_num);\ \textcolor{comment}{//\ Initialize\ the\ GPS\ UART\ serial\ port}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ sda\ =\ sda;\ \textcolor{comment}{//\ Assign\ the\ SDA\ pin}}
+\DoxyCodeLine{00037\ \ \ \ \ scl\ =\ scl;\ \textcolor{comment}{//\ Assign\ the\ SCL\ pin}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ uart\_rx\ =\ gps\_rx;\ \textcolor{comment}{//\ Assign\ the\ GPS\ RX\ pin}}
+\DoxyCodeLine{00040\ \ \ \ \ uart\_tx\ =\ gps\_tx;\ \textcolor{comment}{//\ Assign\ the\ GPS\ TX\ pin}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{const}\ i2c\_master\_bus\_config\_t\ i2c\_bus\_config\ =\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ .i2c\_port\ =\ i2c,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ .sda\_io\_num\ =\ sda,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ .scl\_io\_num\ =\ scl,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ .clk\_source\ =\ I2C\_CLK\_SRC\_DEFAULT,}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ esp\_err\_t\ ret\ =\ i2c\_new\_master\_bus(\&i2c\_bus\_config,\ \&i2c\_handle);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ ard\_sensor\_i2c\ =\ TwoWire(i2c);\ \textcolor{comment}{//\ Initialize\ I2C\ with\ the\ specified\ I2C\ number}}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_sensors_aa5aaea19aaaac3ec3156c4195bd1fa2d}\index{ardSensors@{ardSensors}!````~ardSensors@{\texorpdfstring{$\sim$}{\string~}ardSensors}}
+\index{````~ardSensors@{\texorpdfstring{$\sim$}{\string~}ardSensors}!ardSensors@{ardSensors}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ardSensors()}{\string~ardSensors()}}
+{\footnotesize\ttfamily \label{classard_sensors_aa5aaea19aaaac3ec3156c4195bd1fa2d} 
+ard\+Sensors\+::\texorpdfstring{$\sim$}{\string~}ard\+Sensors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ icm42670\_delete(imu\_handle);\ \textcolor{comment}{//\ Delete\ the\ ICM42670\ handle}}
+\DoxyCodeLine{00056\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classard_sensors_af8da5ef8f7232141c86709f8613ad1a3}\index{ardSensors@{ardSensors}!initSensors@{initSensors}}
+\index{initSensors@{initSensors}!ardSensors@{ardSensors}}
+\doxysubsubsection{\texorpdfstring{initSensors()}{initSensors()}}
+{\footnotesize\ttfamily \label{classard_sensors_af8da5ef8f7232141c86709f8613ad1a3} 
+esp\+\_\+err\+\_\+t ard\+Sensors\+::init\+Sensors (\begin{DoxyParamCaption}\item[{int}]{LIS331\+\_\+addr}{, }\item[{int}]{imu\+\_\+adr}{, }\item[{int}]{baro\+\_\+addr}{, }\item[{int}]{gps\+\_\+baud}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LIS331\+\_\+addr} & I2C address for H3\+LIS331 accelerometer \\
+\hline
+{\em imu\+\_\+adr} & I2C address for ICM42670 IMU \\
+\hline
+{\em baro\+\_\+addr} & I2C address for MS5611 barometer \\
+\hline
+{\em gps\+\_\+baud} & Baud rate for GPS UART \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t Error code indicating success or failure of the initialization 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ esp\_err\_t\ ret\ =\ ESP\_OK;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ ard\_sensor\_i2c.begin(sda,\ scl);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ gps\_uart.begin(gps\_baud,\ SERIAL\_8N1,\ uart\_rx,\ uart\_tx);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (icm42670\_create(i2c\_handle,\ imu\_adr,\ \&imu\_handle)\ !=\ 0)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{stringliteral}{"{}ICM42670\ initialization\ failed."{}});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ ret\ =\ ESP\_FAIL;}
+\DoxyCodeLine{00068\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}ICM42670\ initialized\ successfully."{}});}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{const}\ icm42670\_cfg\_t\ imu\_cfg\ =\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ .acce\_fs\ =\ ACCE\_FS\_16G,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ .acce\_odr\ =\ ACCE\_ODR\_100HZ,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ .gyro\_fs\ =\ GYRO\_FS\_2000DPS,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ .gyro\_odr\ =\ GYRO\_ODR\_100HZ,}
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (icm42670\_config(imu\_handle,\ \&imu\_cfg)\ !=\ 0)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{stringliteral}{"{}ICM42670\ configuration\ failed."{}});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ ret\ =\ ESP\_FAIL;}
+\DoxyCodeLine{00082\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}ICM42670\ configured\ successfully."{}});}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (icm42670\_acce\_set\_pwr(imu\_handle,\ ACCE\_PWR\_LOWNOISE)\ !=\ 0)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{stringliteral}{"{}Error\ initializing\ ICM42670\ accelerometer."{}});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ ret\ =\ ESP\_FAIL;}
+\DoxyCodeLine{00089\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}ICM42670\ accelerometer\ initialized\ successfully."{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{if}\ (icm42670\_gyro\_set\_pwr(imu\_handle,\ GYRO\_PWR\_LOWNOISE)\ !=\ 0)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{stringliteral}{"{}Error\ initializing\ ICM42670\ gyro."{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ ret\ =\ ESP\_FAIL;}
+\DoxyCodeLine{00096\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}ICM42670\ gyro\ initialized\ successfully."{}});}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (accel.begin\_I2C(LIS331\_addr,\ \&ard\_sensor\_i2c)\ !=\ 0)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{stringliteral}{"{}Could\ not\ start\ H3LIS331\ accelerometer."{}});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ ret\ =\ ESP\_FAIL;}
+\DoxyCodeLine{00103\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}H3LIS331\ accelerometer\ started\ successfully."{}});}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ accel.setRange(H3LIS331\_RANGE\_400\_G);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ accel.setDataRate(LIS331\_DATARATE\_100\_HZ);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ barometer\ =\ MS5611(baro\_addr,\ \&ard\_sensor\_i2c);\ \textcolor{comment}{//\ MS5611\ address}}
+\DoxyCodeLine{00112\ \ \ \ \ barometer.begin();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{if}\ (gps.begin(gps\_uart)\ !=\ 0)\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{stringliteral}{"{}GPS\ initialization\ failed."{}});}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ ret\ =\ ESP\_FAIL;}
+\DoxyCodeLine{00117\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}GPS\ initialized\ successfully."{}});}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ gps.setNavigationFrequency(25);}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00123\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_sensors_adde38a01a9aa9d62d563f1b64b38d28d}\index{ardSensors@{ardSensors}!update@{update}}
+\index{update@{update}!ardSensors@{ardSensors}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classard_sensors_adde38a01a9aa9d62d563f1b64b38d28d} 
+esp\+\_\+err\+\_\+t ard\+Sensors\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ esp\_err\_t\ ret\ =\ ESP\_OK;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (esp\_timer\_get\_time()\ -\/\ imu\_update\_time\ >=\ imu\_update\_interval)\ \{}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ icm42670\_value\_t\ accel\_value;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (icm42670\_get\_acce\_value(imu\_handle,\ \&accel\_value)\ !=\ 0)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{stringliteral}{"{}Error\ reading\ ICM42670\ accelerometer."{}});}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ ret\ =\ ESP\_FAIL;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a0026baac6c516895356df7ad25e6bd2b}{verb}}(\textcolor{stringliteral}{"{}ICM42670\ accelerometer\ read\ successfully."{}});}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&accelX,\ accel\_value.x);\ \textcolor{comment}{//\ Check\ units\ when\ have\ hardware}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&accelY,\ accel\_value.y);\ \textcolor{comment}{//\ Check\ units\ when\ have\ hardware}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&accelZ,\ accel\_value.z);\ \textcolor{comment}{//\ Check\ units\ when\ have\ hardware}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ icm42670\_value\_t\ gyro\_value;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (icm42670\_get\_gyro\_value(imu\_handle,\ \&gyro\_value)\ !=\ 0)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{stringliteral}{"{}Error\ reading\ ICM42670\ gyro."{}});}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ ret\ =\ ESP\_FAIL;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ sensor\_log.\mbox{\hyperlink{classard_log_a0026baac6c516895356df7ad25e6bd2b}{verb}}(\textcolor{stringliteral}{"{}ICM42670\ gyro\ read\ successfully."{}});}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&gyroX,\ gyro\_value.x);\ \textcolor{comment}{//\ Check\ units\ when\ have\ hardware}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&gyroY,\ gyro\_value.y);\ \textcolor{comment}{//\ Check\ units\ when\ have\ hardware}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&gyroZ,\ gyro\_value.z);\ \textcolor{comment}{//\ Check\ units\ when\ have\ hardware}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ imu\_update\_time\ =\ esp\_timer\_get\_time();\ \textcolor{comment}{//\ Timestamp\ in\ microseconds}}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ Read\ High\ G\ Accelerometer\ Data}}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{if}\ (esp\_timer\_get\_time()\ -\/\ high\_g\_accel\_update\_time\ >=\ high\_g\_accel\_update\_interval)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ sensors\_event\_t\ accel\_event;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ accel.getEvent(\&accel\_event);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ updateArdDataField(\&highAccelX,\ accel\_event.acceleration.x);\ \textcolor{comment}{//\ In\ m/s\string^2}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ updateArdDataField(\&highAccelY,\ accel\_event.acceleration.y);\ \textcolor{comment}{//\ In\ m/s\string^2}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ updateArdDataField(\&highAccelZ,\ accel\_event.acceleration.z);\ \textcolor{comment}{//\ In\ m/s\string^2}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ high\_g\_accel\_update\_time\ =\ esp\_timer\_get\_time();\ \textcolor{comment}{//\ Timestamp\ in\ microseconds}}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}\ (esp\_timer\_get\_time()\ -\/\ barometer\_update\_time\ >=\ barometer\_update\_interval)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ barometer.read();\ \textcolor{comment}{//\ Read\ the\ barometer\ data}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ updateArdDataField(\&pressure,\ barometer.getPressure()\ *\ 100);\ \textcolor{comment}{//\ Convert\ to\ Pa}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ updateArdDataField(\&temperature,\ barometer.getTemperature());\ \textcolor{comment}{//\ In\ degrees\ Celsius}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ barometer\_update\_time\ =\ esp\_timer\_get\_time();\ \textcolor{comment}{//\ Timestamp\ in\ microseconds}}
+\DoxyCodeLine{00176\ \ \ \ \ \}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{if}\ (esp\_timer\_get\_time()\ -\/\ gps\_update\_time\ >=\ gps\_update\_interval)\ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gps.getPVT()\ ==\ \textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&latitude,\ gps.getLatitude()\ *\ 10e7);\ \textcolor{comment}{//\ Convert\ to\ degrees}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&longitude,\ gps.getLongitude()\ *\ 10e7);\ \textcolor{comment}{//\ Convert\ to\ degrees}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&horizAccuracy,\ gps.getHorizontalAccuracy()\ *\ 1000);\ \textcolor{comment}{//\ Convert\ to\ meters}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&vertAccuracy,\ gps.getVerticalAccuracy()\ *\ 1000);\ \textcolor{comment}{//\ Convert\ to\ meters}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ updateArdDataField(\&gps\_altitude,\ gps.getAltitude()\ *\ 1000);\ \textcolor{comment}{//\ Convert\ to\ meters}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ gps\_update\_time\ =\ esp\_timer\_get\_time();\ \textcolor{comment}{//\ Timestamp\ in\ microseconds}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00191\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ard\+\_\+sensor.\+h\item 
+main/ard\+\_\+sensor.\+cpp\end{DoxyCompactItemize}

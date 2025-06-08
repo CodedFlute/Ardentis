@@ -1,0 +1,80 @@
+\doxysection{main/ard\+\_\+deployment.h File Reference}
+\hypertarget{ard__deployment_8h}{}\label{ard__deployment_8h}\index{main/ard\_deployment.h@{main/ard\_deployment.h}}
+
+
+Header file for the ard\+\_\+deployment class.  
+
+
+{\ttfamily \#include $<$driver/gpio.\+h$>$}\newline
+{\ttfamily \#include $<$esp\+\_\+err.\+h$>$}\newline
+{\ttfamily \#include $<$esp\+\_\+log.\+h$>$}\newline
+Include dependency graph for ard\+\_\+deployment.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{ard__deployment_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{ard__deployment_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structard_deploy_gpio_config}{ard\+Deploy\+Gpio\+Config}}
+\begin{DoxyCompactList}\small\item\em Configuration structure for GPIO pins used in deployment. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classard_output_g_p_i_o}{ard\+Output\+GPIO}}
+\begin{DoxyCompactList}\small\item\em Class to manage GPIO pins for deployment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{ard__deployment_8h_a0d5bf0014cb0a1f121b08aef183dffc5}{Fire\+Pins}} \+: uint8\+\_\+t \{ {\bfseries Zero} = 0
+, {\bfseries One} = 1
+, {\bfseries Two} = 2
+, {\bfseries Three} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Enum containing the valid fire indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the ard\+\_\+deployment class. 
+
+\begin{DoxyAuthor}{Author}
+Roland Neill 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/25
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025
+\end{DoxyCopyright}
+This file contains the definition of the ard\+\_\+deployment class, which is used to manage GPIO pins for deployment purposes. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{ard__deployment_8h_a0d5bf0014cb0a1f121b08aef183dffc5}\index{ard\_deployment.h@{ard\_deployment.h}!FirePins@{FirePins}}
+\index{FirePins@{FirePins}!ard\_deployment.h@{ard\_deployment.h}}
+\doxysubsubsection{\texorpdfstring{FirePins}{FirePins}}
+{\footnotesize\ttfamily \label{ard__deployment_8h_a0d5bf0014cb0a1f121b08aef183dffc5} 
+enum class \mbox{\hyperlink{ard__deployment_8h_a0d5bf0014cb0a1f121b08aef183dffc5}{Fire\+Pins}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enum containing the valid fire indices. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ uint8\_t\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ Zero\ =\ 0,}
+\DoxyCodeLine{00039\ \ \ \ \ One\ =\ 1,}
+\DoxyCodeLine{00040\ \ \ \ \ Two\ =\ 2,}
+\DoxyCodeLine{00041\ \ \ \ \ Three\ =\ 3}
+\DoxyCodeLine{00042\ \};}
+
+\end{DoxyCode}

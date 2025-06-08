@@ -1,0 +1,159 @@
+\doxysection{ard\+Radio Class Reference}
+\hypertarget{classard_radio}{}\label{classard_radio}\index{ardRadio@{ardRadio}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classard_radio_a951ed42384276625e11c8b445eef2528}{ard\+Radio}} (\mbox{\hyperlink{structard___radio_pins__t}{ard\+\_\+\+Radio\+Pins\+\_\+t}} pins)
+\item 
+\mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\+\_\+error\+Code\+\_\+t}} \mbox{\hyperlink{classard_radio_a56a577707c0345c5836f2513a7f378e3}{begin}} (\mbox{\hyperlink{structard___radio_config__t}{ard\+\_\+\+Radio\+Config\+\_\+t}} config)
+\item 
+void \mbox{\hyperlink{classard_radio_a50229d2745208d0d38ed66e079ff6d6c}{set\+Tx\+Int}} (void(\texorpdfstring{$\ast$}{*}callback)(void))
+\item 
+void \mbox{\hyperlink{classard_radio_a4e9065e5ed0e33b7e7198471fabaabf2}{set\+Rx\+Int}} (void(\texorpdfstring{$\ast$}{*}callback)(void))
+\item 
+\mbox{\hyperlink{struct_radio_packet}{Radio\+Packet}} \mbox{\hyperlink{classard_radio_a305e6bd7443ca318b44f390272badc2d}{receive\+Data}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t length)
+\item 
+\mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\+\_\+error\+Code\+\_\+t}} \mbox{\hyperlink{classard_radio_a7a732ff03f5177a0ba16a33357b08761}{send\+Data}} (\mbox{\hyperlink{struct_radio_packet}{Radio\+Packet}} data)
+\item 
+void \mbox{\hyperlink{classard_radio_a04c2687e220a7435d4f5dbb7e44d9591}{done\+TX}} (void)
+\item 
+\Hypertarget{classard_radio_a28cda5b4eea043812d5b638597c58edc}\label{classard_radio_a28cda5b4eea043812d5b638597c58edc} 
+void {\bfseries done\+RX} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classard_radio_a8c31bf343219bb06b6af9884c59690fa}\label{classard_radio_a8c31bf343219bb06b6af9884c59690fa} 
+volatile bool {\bfseries busy}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classard_radio_a951ed42384276625e11c8b445eef2528}\index{ardRadio@{ardRadio}!ardRadio@{ardRadio}}
+\index{ardRadio@{ardRadio}!ardRadio@{ardRadio}}
+\doxysubsubsection{\texorpdfstring{ardRadio()}{ardRadio()}}
+{\footnotesize\ttfamily \label{classard_radio_a951ed42384276625e11c8b445eef2528} 
+ard\+Radio\+::ard\+Radio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structard___radio_pins__t}{ard\+\_\+\+Radio\+Pins\+\_\+t}}}]{pins}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ this-\/>pins\ =\ pins;}
+\DoxyCodeLine{00050\ \ \ \ \ radio\ =\ \textcolor{keyword}{new}\ Module(pins.nss,\ pins.busy,\ pins.nrst,\ pins.dio1,\ spi,\ RADIOLIB\_DEFAULT\_SPI\_SETTINGS);}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classard_radio_a56a577707c0345c5836f2513a7f378e3}\index{ardRadio@{ardRadio}!begin@{begin}}
+\index{begin@{begin}!ardRadio@{ardRadio}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \label{classard_radio_a56a577707c0345c5836f2513a7f378e3} 
+\mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\+\_\+error\+Code\+\_\+t}} ard\+Radio\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structard___radio_config__t}{ard\+\_\+\+Radio\+Config\+\_\+t}}}]{config}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ config\ =\ config;}
+\DoxyCodeLine{00055\ \ \ \ \ spi.begin(pins.sck,\ pins.miso,\ pins.mosi);}
+\DoxyCodeLine{00056\ \ \ \ \ radio\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}Initializing\ radio\ module..."{}});}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ state\ =\ radio.begin(config.frequency,\ config.bandwidth,\ config.spreadFactor,\ config.codingRate,\ config.syncWord,\ config.txPower);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ RADIOLIB\_ERR\_NONE)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ radio\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}Radio\ module\ initialized\ successfully."{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ard\_errorCode\_t::ERROR\_NONE;}
+\DoxyCodeLine{00061\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ radio\_log.\mbox{\hyperlink{classard_log_a1c0218bd1d81dbb120a5ae3a8673f457}{error}}(\textcolor{stringliteral}{"{}Radio\ module\ initialization\ failed."{}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ard\_errorCode\_t::ERROR\_GENERIC;}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_radio_a04c2687e220a7435d4f5dbb7e44d9591}\index{ardRadio@{ardRadio}!doneTX@{doneTX}}
+\index{doneTX@{doneTX}!ardRadio@{ardRadio}}
+\doxysubsubsection{\texorpdfstring{doneTX()}{doneTX()}}
+{\footnotesize\ttfamily \label{classard_radio_a04c2687e220a7435d4f5dbb7e44d9591} 
+void ard\+Radio\+::done\+TX (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ radio.finishTransmit();}
+\DoxyCodeLine{00101\ \ \ \ \ busy\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_radio_a305e6bd7443ca318b44f390272badc2d}\index{ardRadio@{ardRadio}!receiveData@{receiveData}}
+\index{receiveData@{receiveData}!ardRadio@{ardRadio}}
+\doxysubsubsection{\texorpdfstring{receiveData()}{receiveData()}}
+{\footnotesize\ttfamily \label{classard_radio_a305e6bd7443ca318b44f390272badc2d} 
+\mbox{\hyperlink{struct_radio_packet}{Radio\+Packet}} ard\+Radio\+::receive\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{byte}\ buffer[16];}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ state\ =\ radio.readData(buffer,\ length);}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ RADIOLIB\_ERR\_NONE)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ radio\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}Data\ received\ successfully."{}});}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ decodePacket(buffer,\ 16);}
+\DoxyCodeLine{00093\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ radio\_log.\mbox{\hyperlink{classard_log_a1c0218bd1d81dbb120a5ae3a8673f457}{error}}(\textcolor{stringliteral}{"{}Failed\ to\ receive\ data."{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RadioPacket();\ \textcolor{comment}{//\ Return\ an\ empty\ packet\ on\ error}}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_radio_a7a732ff03f5177a0ba16a33357b08761}\index{ardRadio@{ardRadio}!sendData@{sendData}}
+\index{sendData@{sendData}!ardRadio@{ardRadio}}
+\doxysubsubsection{\texorpdfstring{sendData()}{sendData()}}
+{\footnotesize\ttfamily \label{classard_radio_a7a732ff03f5177a0ba16a33357b08761} 
+\mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\+\_\+error\+Code\+\_\+t}} ard\+Radio\+::send\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_packet}{Radio\+Packet}}}]{data}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{byte}*\ encodedData\ =\ encodePacket(data);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ state\ =\ radio.startTransmit(encodedData,\ 16);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ RADIOLIB\_ERR\_NONE)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ radio\_log.\mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{stringliteral}{"{}Radio\ packet\ sent."{}});}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ard\_errorCode\_t::ERROR\_NONE;}
+\DoxyCodeLine{00081\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ radio\_log.\mbox{\hyperlink{classard_log_a1c0218bd1d81dbb120a5ae3a8673f457}{error}}(\textcolor{stringliteral}{"{}Radio\ failed\ to\ send\ data."{}});}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ard\_errorCode\_t::ERROR\_GENERIC;}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_radio_a4e9065e5ed0e33b7e7198471fabaabf2}\index{ardRadio@{ardRadio}!setRxInt@{setRxInt}}
+\index{setRxInt@{setRxInt}!ardRadio@{ardRadio}}
+\doxysubsubsection{\texorpdfstring{setRxInt()}{setRxInt()}}
+{\footnotesize\ttfamily \label{classard_radio_a4e9065e5ed0e33b7e7198471fabaabf2} 
+void ard\+Radio\+::set\+Rx\+Int (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*}}]{callback~}{)(void)}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ radio.setPacketReceivedAction(callback);}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_radio_a50229d2745208d0d38ed66e079ff6d6c}\index{ardRadio@{ardRadio}!setTxInt@{setTxInt}}
+\index{setTxInt@{setTxInt}!ardRadio@{ardRadio}}
+\doxysubsubsection{\texorpdfstring{setTxInt()}{setTxInt()}}
+{\footnotesize\ttfamily \label{classard_radio_a50229d2745208d0d38ed66e079ff6d6c} 
+void ard\+Radio\+::set\+Tx\+Int (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*}}]{callback~}{)(void)}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ radio.setPacketSentAction(callback);}
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/\mbox{\hyperlink{ard__radio_8h}{ard\+\_\+radio.\+h}}\item 
+main/\mbox{\hyperlink{ard__radio_8cpp}{ard\+\_\+radio.\+cpp}}\end{DoxyCompactItemize}

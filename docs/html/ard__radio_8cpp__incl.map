@@ -1,0 +1,20 @@
+<map id="main/ard_radio.cpp" name="main/ard_radio.cpp">
+<area shape="rect" id="Node000001" title="Implementation code for the radio module for the Ardentis flight computer." alt="" coords="257,5,388,32"/>
+<area shape="rect" id="Node000002" href="$ard__radio_8h.html" title=" " alt="" coords="193,80,278,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,35,264,72,261,68,306,30"/>
+<area shape="rect" id="Node000003" href="$ard__log_8h.html" title="Logging library header for the Ardentis flight computer." alt="" coords="5,155,80,181"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="290,35,182,82,124,116,74,148,72,143,122,111,180,78,288,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="299,155,354,181"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="326,32,328,139,323,139,320,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="378,155,454,181"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="333,31,402,140,397,143,328,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="411,80,503,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="347,30,421,70,419,75,345,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,110,91,151,90,146,201,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="192,155,275,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="238,107,237,139,232,139,233,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="104,155,168,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="220,109,167,147,164,143,217,105"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="253,105,301,143,298,147,250,109"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="268,105,371,146,369,151,266,110"/>
+</map>

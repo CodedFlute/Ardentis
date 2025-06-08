@@ -1,0 +1,11 @@
+dependencies:
+  espressif/arduino-esp32:
+    pre_release: false
+    version: '*'
+  esp32async/espasyncwebserver: 3.7.6
+  bblanchon/arduinojson: 7.4.1
+  esp32async/asynctcp: 3.3.8
+  adafruit/Adafruit_BusIO:
+    version: patch-1
+    git: https://github.com/mak0t0san/Adafruit_BusIO.git
+  espressif/icm42670: ^2.0.1

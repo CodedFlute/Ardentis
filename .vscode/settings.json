@@ -1,0 +1,33 @@
+{
+    "files.associations": {
+        "*.tab": "csv (whitespace)",
+        "*.csv": "csv",
+        "array": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "list": "cpp",
+        "format": "cpp",
+        "span": "cpp",
+        "text_encoding": "cpp",
+        "regex": "cpp",
+        "cstdint": "cpp"
+    },
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32s3"
+    },
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "catppuccin-icons.associations.folders": {
+        "main": "folder_src",
+        "managed_components": "folder_packages",
+},
+"idf.espIdfPathWin": "a:\\esp\\v5.4.1\\esp-idf",
+"idf.toolsPathWin": "a:\\.espressif",
+"idf.pythonInstallPath": "a:\\.espressif\\tools\\idf-python\\3.11.2\\python.exe"
+}

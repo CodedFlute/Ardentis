@@ -1,0 +1,46 @@
+\doxysection{Radio\+Parameters.\+h}
+\hypertarget{_radio_parameters_8h_source}{}\label{_radio_parameters_8h_source}\index{main/RadioParameters.h@{main/RadioParameters.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\#include\ <SX126x-\/Arduino.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}pins.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ ARD\_RADIO\_FREQ\ 915\ }\textcolor{comment}{//\ MHz}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ ARD\_LORA\_BW\ 125\ }\textcolor{comment}{//\ kHz}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ARD\_LORA\_SF\ 7}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ ARD\_LORA\_CR\ 4\ }\textcolor{comment}{//\ 4/5}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ LORA\_PREAMBLE\_LENGTH\ 8\ \ }\textcolor{comment}{//\ Same\ for\ Tx\ and\ Rx}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ LORA\_SYMBOL\_TIMEOUT\ 0\ \ \ }\textcolor{comment}{//\ Symbols}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ LORA\_FIX\_LENGTH\_PAYLOAD\_ON\ false}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ LORA\_IQ\_INVERSION\_ON\ false}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ RX\_TIMEOUT\_VALUE\ 3000}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ TX\_TIMEOUT\_VALUE\ 3000}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ ARD\_LORA\_SYNCWORD\ 0x12U}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ ARD\_RADIO\_TX\_PWR\ 22}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ CALLSIGN\ "{}VE3FSZ"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ BUFFER\_SIZE\ 64\ }\textcolor{comment}{//\ Define\ the\ payload\ size\ here}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//static\ RadioEvents\_t\ RadioEvents;}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//hw\_config\ ardRadioConfig;}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Define\ the\ HW\ configuration\ between\ MCU\ and\ SX126x}}
+\DoxyCodeLine{00028\ \textcolor{comment}{/*void\ setupRadioConfig()\ \{}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ ardRadioConfig.CHIP\_TYPE\ =\ SX1262\_CHIP;\ \ \ \ \ \ \ \ \ //\ Example\ uses\ an\ eByte\ E22\ module\ with\ an\ SX1262}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ ardRadioConfig.PIN\_LORA\_RESET\ =\ ARD\_RADIO\_NRST;\ //\ LORA\ RESET}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ ardRadioConfig.PIN\_LORA\_NSS\ =\ ARD\_RADIO\_NSS;\ \ \ \ \ //\ LORA\ SPI\ CS}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ ardRadioConfig.PIN\_LORA\_SCLK\ =\ ARD\_RADIO\_SPI\_SCK;\ \ \ //\ LORA\ SPI\ CLK}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ ardRadioConfig.PIN\_LORA\_MISO\ =\ ARD\_RADIO\_SPI\_MISO;\ \ \ //\ LORA\ SPI\ MISO}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ ardRadioConfig.PIN\_LORA\_DIO\_1\ =\ ARD\_RADIO\_DIO1;\ //\ LORA\ DIO\_1}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ ardRadioConfig.PIN\_LORA\_BUSY\ =\ ARD\_RADIO\_BUSY;\ \ \ //\ LORA\ SPI\ BUSY}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ ardRadioConfig.PIN\_LORA\_MOSI\ =\ ARD\_RADIO\_SPI\_MOSI;\ \ \ //\ LORA\ SPI\ MOSI}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ ardRadioConfig.USE\_DIO3\_ANT\_SWITCH\ =\ false;\ \ \ \ \ //\ Only\ Insight\ ISP4520\ module\ uses\ DIO3\ as\ antenna\ control}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ ardRadioConfig.USE\_LDO\ =\ false;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Set\ to\ true\ if\ SX126x\ uses\ LDO\ instead\ of\ DCDC\ converter}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ ardRadioConfig.USE\_RXEN\_ANT\_PWR\ =\ false;\ \ \ \ \ \ \ \ //\ Antenna\ power\ is\ not\ controlled\ by\ a\ GPIO}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\}*/}}
+
+\end{DoxyCode}

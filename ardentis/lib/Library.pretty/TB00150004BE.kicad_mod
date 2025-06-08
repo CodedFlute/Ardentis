@@ -1,0 +1,231 @@
+(footprint "TB00150004BE"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "TB001-500-04BE-3")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 7.5 -0.5 0)
+		(layer "F.SilkS")
+		(uuid "75ae9e2c-a243-4b5a-8859-15acc18ac364")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "Screw_Terminal_01x04"
+		(at 7.5 -0.5 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "af7509cf-fae3-4283-a15c-83905305bd60")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bc87f00c-9229-4a90-8950-f353384569f1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c04f3c2e-07d9-45c7-813a-eae3b6341eea")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2.5 -5)
+		(end 17.5 -5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0b4fbf2c-e904-40fe-a2b9-a33396e0dbfc")
+	)
+	(fp_line
+		(start -2.5 4)
+		(end -2.5 -5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ed3c40b4-bac4-4d4e-991c-a1460c5ec62c")
+	)
+	(fp_line
+		(start 17.5 -5)
+		(end 17.5 4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "88d6c086-cf84-485a-b2be-6117582fd661")
+	)
+	(fp_line
+		(start 17.5 4)
+		(end -2.5 4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a4984ae2-2de8-453b-8b87-6b86dab16ea1")
+	)
+	(fp_line
+		(start -3.5 -6)
+		(end 18.5 -6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e7e5f87e-1bdf-425c-9b29-387e24c16c73")
+	)
+	(fp_line
+		(start -3.5 5)
+		(end -3.5 -6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "334a472b-af43-4a9c-afc3-642978dfc546")
+	)
+	(fp_line
+		(start 18.5 -6)
+		(end 18.5 5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "08bf5440-d638-41a9-8771-82790c9d9174")
+	)
+	(fp_line
+		(start 18.5 5)
+		(end -3.5 5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "90a4f061-9f76-48c8-b27e-c7a1ccc3fe9c")
+	)
+	(fp_line
+		(start -2.5 -5)
+		(end 17.5 -5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a25ebcf2-098e-4767-b12e-eaf2481bbad4")
+	)
+	(fp_line
+		(start -2.5 4)
+		(end -2.5 -5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "559cc50c-697d-4c72-999f-b4f0b87ccd5d")
+	)
+	(fp_line
+		(start 17.5 -5)
+		(end 17.5 4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1dabcb22-9cf2-4064-b0b1-a9742704674a")
+	)
+	(fp_line
+		(start 17.5 4)
+		(end -2.5 4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "54474f8f-0bd2-4e91-83a9-72544632cbac")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 7.5 -0.5 0)
+		(layer "F.Fab")
+		(uuid "3dedaac2-817f-4bdb-b1e8-e16bd7c860d9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.95 1.95)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c3fc4efa-2704-4556-9cda-9f96cdab957a")
+	)
+	(pad "2" thru_hole circle
+		(at 5 0)
+		(size 1.95 1.95)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0103d463-ea43-4944-a5c6-e5b0301acaec")
+	)
+	(pad "3" thru_hole circle
+		(at 10 0)
+		(size 1.95 1.95)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8bd544dc-5244-4f98-bbd5-a4083436a6df")
+	)
+	(pad "4" thru_hole circle
+		(at 15 0)
+		(size 1.95 1.95)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1a9febe2-610d-4ef3-ae5a-e49bc7968b32")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/Roland/Documents/KiCad/9.0/3dmodels/TB001-500-04BE.stp"
+		(offset
+			(xyz 30 5 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 90)
+		)
+	)
+)

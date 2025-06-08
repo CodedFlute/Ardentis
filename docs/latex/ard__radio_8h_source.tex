@@ -1,0 +1,68 @@
+\doxysection{ard\+\_\+radio.\+h}
+\hypertarget{ard__radio_8h_source}{}\label{ard__radio_8h_source}\index{main/ard\_radio.h@{main/ard\_radio.h}}
+\mbox{\hyperlink{ard__radio_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ard__log_8h}{ard\_log.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <RadioLib.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <SPI.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{char}\ callsign[7];}
+\DoxyCodeLine{00025\ \ \ \ \ int32\_t\ latitude;}
+\DoxyCodeLine{00026\ \ \ \ \ int32\_t\ longitude;}
+\DoxyCodeLine{00027\ \ \ \ \ uint16\_t\ altitude;}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structard___radio_config__t}{ard\_RadioConfig\_t}}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ frequency;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ bandwidth;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ spreadFactor;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ codingRate;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ syncWord;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ txPower;}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structard___radio_pins__t}{ard\_RadioPins\_t}}\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ gpio\_num\_t\ nss;}
+\DoxyCodeLine{00066\ \ \ \ \ gpio\_num\_t\ busy;}
+\DoxyCodeLine{00067\ \ \ \ \ gpio\_num\_t\ nrst;}
+\DoxyCodeLine{00068\ \ \ \ \ gpio\_num\_t\ dio1;}
+\DoxyCodeLine{00069\ \ \ \ \ gpio\_num\_t\ miso;}
+\DoxyCodeLine{00070\ \ \ \ \ gpio\_num\_t\ mosi;}
+\DoxyCodeLine{00071\ \ \ \ \ gpio\_num\_t\ sck;}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{byte}*\ encodePacket(\mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\ packet);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\ decodePacket(\textcolor{keywordtype}{byte}\ data[18],\ \textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{class\ }ardRadio\ \{}
+\DoxyCodeLine{00081\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00082\ \ \ \ \ ardRadio(\mbox{\hyperlink{structard___radio_pins__t}{ard\_RadioPins\_t}}\ pins);}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\_errorCode\_t}}\ begin(\mbox{\hyperlink{structard___radio_config__t}{ard\_RadioConfig\_t}}\ config);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ setTxInt(\textcolor{keywordtype}{void}\ (*callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ setRxInt(\textcolor{keywordtype}{void}\ (*callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\ receiveData(uint8\_t\ *data,\ \textcolor{keywordtype}{size\_t}\ length);}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\_errorCode\_t}}\ sendData(\mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\ data);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ busy;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ doneTX(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ doneRX(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00091\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ SX1262\ radio\ =\ NULL;}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{structard___radio_pins__t}{ard\_RadioPins\_t}}\ pins;}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{structard___radio_config__t}{ard\_RadioConfig\_t}}\ config;}
+\DoxyCodeLine{00095\ \ \ \ \ SPIClass\ spi\ =\ SPIClass(HSPI);}
+\DoxyCodeLine{00096\ \};}
+
+\end{DoxyCode}

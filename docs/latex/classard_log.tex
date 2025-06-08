@@ -1,0 +1,185 @@
+\doxysection{ard\+Log Class Reference}
+\hypertarget{classard_log}{}\label{classard_log}\index{ardLog@{ardLog}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classard_log_ad507fc97718884fc66cc277a97fb11f7}{ard\+Log}} (const char \texorpdfstring{$\ast$}{*}tag)
+\begin{DoxyCompactList}\small\item\em Construct a new ard Log object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classard_log_ae2364ad34d04026ce29d15ab956e2163}{log\+Level}} (\mbox{\hyperlink{ard__log_8h_a2bcec6abac24273ae7d38f257f7d41b4}{ard\+\_\+log\+Level\+\_\+t}} level)
+\begin{DoxyCompactList}\small\item\em Set the logging level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classard_log_a1c0218bd1d81dbb120a5ae3a8673f457}{error}} (const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Log an error message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}} (const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Log a warning message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}} (const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Log an informational message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classard_log_a6907ff72cbbe5cfe65d105567c1db062}{debug}} (const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Log a debug message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classard_log_a0026baac6c516895356df7ad25e6bd2b}{verb}} (const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Log a verbose message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classard_log_ad507fc97718884fc66cc277a97fb11f7}\index{ardLog@{ardLog}!ardLog@{ardLog}}
+\index{ardLog@{ardLog}!ardLog@{ardLog}}
+\doxysubsubsection{\texorpdfstring{ardLog()}{ardLog()}}
+{\footnotesize\ttfamily \label{classard_log_ad507fc97718884fc66cc277a97fb11f7} 
+ard\+Log\+::ard\+Log (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{tag}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new ard Log object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & The tag for this logger instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ TAG\ =\ tag;}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classard_log_a6907ff72cbbe5cfe65d105567c1db062}\index{ardLog@{ardLog}!debug@{debug}}
+\index{debug@{debug}!ardLog@{ardLog}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily \label{classard_log_a6907ff72cbbe5cfe65d105567c1db062} 
+void ard\+Log\+::debug (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Log a debug message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The debug message to log \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ ESP\_LOGD(TAG,\ \textcolor{stringliteral}{"{}\%s"{}},\ message);}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_log_a1c0218bd1d81dbb120a5ae3a8673f457}\index{ardLog@{ardLog}!error@{error}}
+\index{error@{error}!ardLog@{ardLog}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \label{classard_log_a1c0218bd1d81dbb120a5ae3a8673f457} 
+void ard\+Log\+::error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Log an error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The error message to log \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ ESP\_LOGE(TAG,\ \textcolor{stringliteral}{"{}\%s"{}},\ message);}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_log_a81fc429072ba5188b161dc1182ac77b9}\index{ardLog@{ardLog}!info@{info}}
+\index{info@{info}!ardLog@{ardLog}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily \label{classard_log_a81fc429072ba5188b161dc1182ac77b9} 
+void ard\+Log\+::info (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Log an informational message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The informational message to log \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ ESP\_LOGI(TAG,\ \textcolor{stringliteral}{"{}\%s"{}},\ message);}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_log_ae2364ad34d04026ce29d15ab956e2163}\index{ardLog@{ardLog}!logLevel@{logLevel}}
+\index{logLevel@{logLevel}!ardLog@{ardLog}}
+\doxysubsubsection{\texorpdfstring{logLevel()}{logLevel()}}
+{\footnotesize\ttfamily \label{classard_log_ae2364ad34d04026ce29d15ab956e2163} 
+void ard\+Log\+::log\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ard__log_8h_a2bcec6abac24273ae7d38f257f7d41b4}{ard\+\_\+log\+Level\+\_\+t}}}]{level}{}\end{DoxyParamCaption})}
+
+
+
+Set the logging level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The level of logging to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ esp\_log\_level\_set(TAG,\ (esp\_log\_level\_t)level);}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_log_a0026baac6c516895356df7ad25e6bd2b}\index{ardLog@{ardLog}!verb@{verb}}
+\index{verb@{verb}!ardLog@{ardLog}}
+\doxysubsubsection{\texorpdfstring{verb()}{verb()}}
+{\footnotesize\ttfamily \label{classard_log_a0026baac6c516895356df7ad25e6bd2b} 
+void ard\+Log\+::verb (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Log a verbose message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The verbose message to log \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ ESP\_LOGV(TAG,\ \textcolor{stringliteral}{"{}\%s"{}},\ message);}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}\index{ardLog@{ardLog}!warn@{warn}}
+\index{warn@{warn}!ardLog@{ardLog}}
+\doxysubsubsection{\texorpdfstring{warn()}{warn()}}
+{\footnotesize\ttfamily \label{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f} 
+void ard\+Log\+::warn (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Log a warning message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The warning message to log \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ ESP\_LOGW(TAG,\ \textcolor{stringliteral}{"{}\%s"{}},\ message);}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/\mbox{\hyperlink{ard__log_8h}{ard\+\_\+log.\+h}}\item 
+main/\mbox{\hyperlink{ard__log_8cpp}{ard\+\_\+log.\+cpp}}\end{DoxyCompactItemize}

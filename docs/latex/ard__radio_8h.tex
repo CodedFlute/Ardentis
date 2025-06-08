@@ -1,0 +1,90 @@
+\doxysection{main/ard\+\_\+radio.h File Reference}
+\hypertarget{ard__radio_8h}{}\label{ard__radio_8h}\index{main/ard\_radio.h@{main/ard\_radio.h}}
+{\ttfamily \#include "{}ard\+\_\+log.\+h"{}}\newline
+{\ttfamily \#include $<$Radio\+Lib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$SPI.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+Include dependency graph for ard\+\_\+radio.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ard__radio_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{ard__radio_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_radio_packet}{Radio\+Packet}}
+\item 
+struct \mbox{\hyperlink{structard___radio_config__t}{ard\+\_\+\+Radio\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure to hold the Lo\+Ra configuration parameters. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structard___radio_pins__t}{ard\+\_\+\+Radio\+Pins\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure to hold the radio pin configuration parameters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classard_radio}{ard\+Radio}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+byte \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ard__radio_8h_a4f22a60691cf95391c78bf6419803ade}{encode\+Packet}} (\mbox{\hyperlink{struct_radio_packet}{Radio\+Packet}} packet)
+\item 
+\Hypertarget{ard__radio_8h_aab4e1dda370fc840688805541c6f7816}\label{ard__radio_8h_aab4e1dda370fc840688805541c6f7816} 
+\mbox{\hyperlink{struct_radio_packet}{Radio\+Packet}} {\bfseries decode\+Packet} (byte data\mbox{[}18\mbox{]}, int length)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Roland Neill 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1-\/alpha 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/28
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ard__radio_8h_a4f22a60691cf95391c78bf6419803ade}\index{ard\_radio.h@{ard\_radio.h}!encodePacket@{encodePacket}}
+\index{encodePacket@{encodePacket}!ard\_radio.h@{ard\_radio.h}}
+\doxysubsubsection{\texorpdfstring{encodePacket()}{encodePacket()}}
+{\footnotesize\ttfamily \label{ard__radio_8h_a4f22a60691cf95391c78bf6419803ade} 
+byte \texorpdfstring{$\ast$}{*} encode\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_packet}{Radio\+Packet}}}]{packet}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{byte}*\ encodedData\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{byte}[16];}
+\DoxyCodeLine{00028\ \ \ \ \ encodedData[0]\ =\ packet.callsign[0];}
+\DoxyCodeLine{00029\ \ \ \ \ encodedData[1]\ =\ packet.callsign[1];}
+\DoxyCodeLine{00030\ \ \ \ \ encodedData[2]\ =\ packet.callsign[2];}
+\DoxyCodeLine{00031\ \ \ \ \ encodedData[3]\ =\ packet.callsign[3];}
+\DoxyCodeLine{00032\ \ \ \ \ encodedData[4]\ =\ packet.callsign[4];}
+\DoxyCodeLine{00033\ \ \ \ \ encodedData[5]\ =\ uint8\_t(0);\ \textcolor{comment}{//\ Packet\ Version\ number}}
+\DoxyCodeLine{00034\ \ \ \ \ encodedData[6]\ =\ uint8\_t(packet.latitude\ >>\ 24);}
+\DoxyCodeLine{00035\ \ \ \ \ encodedData[7]\ =\ uint8\_t(packet.latitude\ >>\ 16);}
+\DoxyCodeLine{00036\ \ \ \ \ encodedData[8]\ =\ uint8\_t(packet.latitude\ >>\ 8);}
+\DoxyCodeLine{00037\ \ \ \ \ encodedData[9]\ =\ uint8\_t(packet.latitude);}
+\DoxyCodeLine{00038\ \ \ \ \ encodedData[10]\ =\ uint8\_t(packet.longitude\ >>\ 24);}
+\DoxyCodeLine{00039\ \ \ \ \ encodedData[11]\ =\ uint8\_t(packet.longitude\ >>\ 16);}
+\DoxyCodeLine{00040\ \ \ \ \ encodedData[12]\ =\ uint8\_t(packet.longitude\ >>\ 8);}
+\DoxyCodeLine{00041\ \ \ \ \ encodedData[13]\ =\ uint8\_t(packet.longitude);}
+\DoxyCodeLine{00042\ \ \ \ \ encodedData[14]\ =\ uint8\_t(packet.altitude\ >>\ 8);}
+\DoxyCodeLine{00043\ \ \ \ \ encodedData[15]\ =\ uint8\_t(packet.altitude);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ encodedData;}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}

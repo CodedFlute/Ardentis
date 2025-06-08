@@ -1,0 +1,27 @@
+[submodule "components/ICM42670P/ICM42670P"]
+	path = components/ICM42670P/ICM42670P
+	url = https://github.com/tdk-invn-oss/motion.arduino.ICM42670P.git
+[submodule "components/MS5611/MS5611"]
+	path = components/MS5611/MS5611
+	url = https://github.com/RobTillaart/MS5611.git
+[submodule "components/Adafruit_LIS2MDL/Adafruit_LIS2MDL"]
+	path = components/Adafruit_LIS2MDL/Adafruit_LIS2MDL
+	url = https://github.com/adafruit/Adafruit_LIS2MDL.git
+[submodule "components/Adafruit_Sensor/Adafruit_Sensor"]
+	path = components/Adafruit_Sensor/Adafruit_Sensor
+	url = https://github.com/adafruit/Adafruit_Sensor.git
+[submodule "components/Adafruit_LIS331/Adafruit_LIS331"]
+	path = components/Adafruit_LIS331/Adafruit_LIS331
+	url = https://github.com/adafruit/Adafruit_LIS331.git
+[submodule "components/SX126x-Arduino/SX126x-Arduino"]
+	path = components/SX126x-Arduino/SX126x-Arduino
+	url = https://github.com/beegee-tokyo/SX126x-Arduino.git
+[submodule "components/SparkFun_u-blox_GNSS_v3/SparkFun_u-blox_GNSS_v3"]
+	path = components/SparkFun_u-blox_GNSS_v3/SparkFun_u-blox_GNSS_v3
+	url = https://github.com/sparkfun/SparkFun_u-blox_GNSS_v3.git
+[submodule "components/RadioLib/RadioLib"]
+	path = components/RadioLib/RadioLib
+	url = https://github.com/jgromes/RadioLib.git
+[submodule "docs/doxygen-theme"]
+	path = docs/doxygen-theme
+	url = https://github.com/jothepro/doxygen-awesome-css.git

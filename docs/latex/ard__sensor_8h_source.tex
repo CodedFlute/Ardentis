@@ -1,0 +1,80 @@
+\doxysection{ard\+\_\+sensor.\+h}
+\hypertarget{ard__sensor_8h_source}{}\label{ard__sensor_8h_source}\index{main/ard\_sensor.h@{main/ard\_sensor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SparkFun\_u-\/blox\_GNSS\_v3.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <Adafruit\_Sensor.h>}\ \textcolor{comment}{//Needed\ for\ adafruit\ sensor\ libraries}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <Adafruit\_H3LIS331.h>}\ \textcolor{comment}{//\ For\ H3LIS331\ High\ G\ Accelerometer}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <ICM42670P.h>}\ \textcolor{comment}{//\ For\ ICM42670P\ IMU}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <icm42670.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <MS5611.h>}\ \textcolor{comment}{//\ For\ MS5611\ Barometer}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <Wire.h>}\ \textcolor{comment}{//\ For\ I2C\ communication}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <HardwareSerial.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <driver/i2c\_master.h>}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structard_data_field}{ardDataField}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ int16\_t\ val;}
+\DoxyCodeLine{00029\ \ \ \ \ int64\_t\ timestamp;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ updated;}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ updateArdDataField(\mbox{\hyperlink{structard_data_field}{ardDataField}}*\ field,\ int16\_t\ val);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }ardSensors\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ ardSensors(gpio\_num\_t\ sda,\ gpio\_num\_t\ scl,\ \textcolor{keywordtype}{int}\ i2c,\ \textcolor{keywordtype}{int}\ gps\_uart\_num,\ gpio\_num\_t\ gps\_tx,\ gpio\_num\_t\ gps\_rx);}
+\DoxyCodeLine{00051\ \ \ \ \ \string~ardSensors();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \ \ \ \ esp\_err\_t\ \mbox{\hyperlink{classard_sensors_af8da5ef8f7232141c86709f8613ad1a3}{initSensors}}(\textcolor{keywordtype}{int}\ LIS331\_addr,\ \textcolor{keywordtype}{int}\ imu\_adr,\ \textcolor{keywordtype}{int}\ baro\_addr,\ \textcolor{keywordtype}{int}\ gps\_baud);}
+\DoxyCodeLine{00062\ \ \ \ \ esp\_err\_t\ update();\ \textcolor{comment}{//\ Function\ to\ check\ if\ new\ sensor\ data\ is\ available\ and\ update\ the\ data\ fields\ accordingly.}}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ accelX;\ \textcolor{comment}{//\ Accelerometer\ X-\/axis\ data}}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ accelY;\ \textcolor{comment}{//\ Accelerometer\ Y-\/axis\ data}}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ accelZ;\ \textcolor{comment}{//\ Accelerometer\ Z-\/axis\ data}}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ gyroX;\ \textcolor{comment}{//\ Gyroscope\ X-\/axis\ data}}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ gyroY;\ \textcolor{comment}{//\ Gyroscope\ Y-\/axis\ data}}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ gyroZ;\ \textcolor{comment}{//\ Gyroscope\ Y-\/axis\ data}}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ highAccelX;\ \textcolor{comment}{//\ High\ G\ Accelerometer\ X-\/axis\ data}}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ highAccelY;\ \textcolor{comment}{//\ High\ G\ Accelerometer\ Y-\/axis\ data}}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ highAccelZ;\ \textcolor{comment}{//\ High\ G\ Accelerometer\ Z-\/axis\ data}}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ pressure;\ \textcolor{comment}{//\ Pressure\ data\ from\ barometer}}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ altitude;\ \textcolor{comment}{//\ Altitude\ data\ from\ barometer}}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ temperature;\ \textcolor{comment}{//\ Temperature\ data\ from\ barometer}}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ latitude;\ \textcolor{comment}{//\ Latitude\ data\ from\ GPS}}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ longitude;\ \textcolor{comment}{//\ Longitude\ data\ from\ GPS}}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ horizAccuracy;\ \textcolor{comment}{//\ Horizontal\ accuracy\ from\ GPS}}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ vertAccuracy;\ \textcolor{comment}{//\ Vertical\ accuracy\ from\ GPS}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{structard_data_field}{ardDataField}}\ gps\_altitude;\ \textcolor{comment}{//\ Altitude\ data\ from\ GPS}}
+\DoxyCodeLine{00080\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ TwoWire\ ard\_sensor\_i2c\ =\ NULL;\ \textcolor{comment}{//\ Arduino\ I2C\ bus\ object}}
+\DoxyCodeLine{00082\ \ \ \ \ SFE\_UBLOX\_GNSS\_SERIAL\ gps;\ \textcolor{comment}{//\ GPS\ object}}
+\DoxyCodeLine{00083\ \ \ \ \ HardwareSerial\ gps\_uart\ =\ NULL;\ \textcolor{comment}{//\ GPS\ UART\ bus\ object}}
+\DoxyCodeLine{00084\ \ \ \ \ MS5611\ barometer;\ \textcolor{comment}{//\ Barometer\ object}}
+\DoxyCodeLine{00085\ \ \ \ \ Adafruit\_H3LIS331\ accel\ =\ Adafruit\_H3LIS331();\ \textcolor{comment}{//\ High\ G\ Accelerometer\ object}}
+\DoxyCodeLine{00086\ \ \ \ \ icm42670\_handle\_t\ imu\_handle\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ ICM42670\ IMU\ object}}
+\DoxyCodeLine{00087\ \ \ \ \ i2c\_master\_bus\_handle\_t\ i2c\_handle\ =\ NULL;\ \textcolor{comment}{//\ ESP-\/IDF\ I2C\ bus\ object}}
+\DoxyCodeLine{00088\ \ \ \ \ gpio\_num\_t\ sda;\ \textcolor{comment}{//\ SDA\ GPIO\ pin}}
+\DoxyCodeLine{00089\ \ \ \ \ gpio\_num\_t\ scl;\ \textcolor{comment}{//\ SCL\ GPIO\ pin}}
+\DoxyCodeLine{00090\ \ \ \ \ gpio\_num\_t\ uart\_rx;\ \textcolor{comment}{//\ GPS\ RX\ GPIO\ pin}}
+\DoxyCodeLine{00091\ \ \ \ \ gpio\_num\_t\ uart\_tx;\ \textcolor{comment}{//\ GPS\ TX\ GPIO\ pin}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ gps\_uart\_num;\ \textcolor{comment}{//\ GPS\ UART\ bus\ number}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ i2c\_num;\ \textcolor{comment}{//\ I2C\ bus\ number}}
+\DoxyCodeLine{00094\ \ \ \ \ int16\_t\ imu\_update\_time;\ \textcolor{comment}{//\ Timestamp\ of\ the\ last\ IMU\ update}}
+\DoxyCodeLine{00095\ \ \ \ \ int16\_t\ imu\_update\_interval;\ \textcolor{comment}{//\ Interval\ between\ IMU\ updates\ in\ microseconds}}
+\DoxyCodeLine{00096\ \ \ \ \ int16\_t\ high\_g\_accel\_update\_time;\ \textcolor{comment}{//\ Timestamp\ of\ the\ last\ High\ G\ Accelerometer\ update}}
+\DoxyCodeLine{00097\ \ \ \ \ int16\_t\ high\_g\_accel\_update\_interval;\ \textcolor{comment}{//\ Interval\ between\ High\ G\ Accelerometer\ updates\ in\ microseconds}}
+\DoxyCodeLine{00098\ \ \ \ \ int16\_t\ barometer\_update\_time;\ \textcolor{comment}{//\ Timestamp\ of\ the\ last\ Barometer\ update}}
+\DoxyCodeLine{00099\ \ \ \ \ int16\_t\ barometer\_update\_interval;\ \textcolor{comment}{//\ Interval\ between\ Barometer\ updates\ in\ microseconds}}
+\DoxyCodeLine{00100\ \ \ \ \ int16\_t\ gps\_update\_time;\ \textcolor{comment}{//\ Timestamp\ of\ the\ last\ GPS\ update}}
+\DoxyCodeLine{00101\ \ \ \ \ int16\_t\ gps\_update\_interval;\ \textcolor{comment}{//\ Interval\ between\ GPS\ updates\ in\ microseconds}}
+\DoxyCodeLine{00102\ \};}
+
+\end{DoxyCode}

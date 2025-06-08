@@ -1,0 +1,110 @@
+\doxysection{ard\+Output\+GPIO Class Reference}
+\hypertarget{classard_output_g_p_i_o}{}\label{classard_output_g_p_i_o}\index{ardOutputGPIO@{ardOutputGPIO}}
+
+
+Class to manage GPIO pins for deployment.  
+
+
+
+
+{\ttfamily \#include $<$ard\+\_\+deployment.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classard_output_g_p_i_o_af5d7ffdf0ecc5ad3016263c3491568ef}{ard\+Output\+GPIO}} (\mbox{\hyperlink{structard_deploy_gpio_config}{ard\+Deploy\+Gpio\+Config}} config)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classard_output_g_p_i_o}{ard\+Output\+GPIO} object. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classard_output_g_p_i_o_a56ba8b3fd0c01ce690aeb6c26872d7b4}{fire}} (\mbox{\hyperlink{ard__deployment_8h_a0d5bf0014cb0a1f121b08aef183dffc5}{Fire\+Pins}} pin)
+\begin{DoxyCompactList}\small\item\em Fire the specified pin. \end{DoxyCompactList}\item 
+std\+::array$<$ bool, 4 $>$ \mbox{\hyperlink{classard_output_g_p_i_o_a6d5c05f04f843caf8d6902b6d21149d6}{check\+Continuity}} ()
+\begin{DoxyCompactList}\small\item\em Check the continuity of the outputs. \end{DoxyCompactList}\item 
+std\+::array$<$ bool, 4 $>$ \mbox{\hyperlink{classard_output_g_p_i_o_a91f5c8e98572c809484cca29713cab57}{fire\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Check which pins have been fired. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to manage GPIO pins for deployment. 
+
+This class provides methods to initialize GPIO pins, set their modes, and read/write values. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classard_output_g_p_i_o_af5d7ffdf0ecc5ad3016263c3491568ef}\index{ardOutputGPIO@{ardOutputGPIO}!ardOutputGPIO@{ardOutputGPIO}}
+\index{ardOutputGPIO@{ardOutputGPIO}!ardOutputGPIO@{ardOutputGPIO}}
+\doxysubsubsection{\texorpdfstring{ardOutputGPIO()}{ardOutputGPIO()}}
+{\footnotesize\ttfamily \label{classard_output_g_p_i_o_af5d7ffdf0ecc5ad3016263c3491568ef} 
+ard\+Output\+GPIO\+::ard\+Output\+GPIO (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structard_deploy_gpio_config}{ard\+Deploy\+Gpio\+Config}}}]{config}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{classard_output_g_p_i_o}{ard\+Output\+GPIO} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Configuration for GPIO pins used in deployment \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ config\ =\ config;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ i++)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_direction(config.fire[i],\ GPIO\_MODE\_OUTPUT);\ \textcolor{comment}{//\ Set\ fire\ pins\ as\ output}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_level(config.fire[i],\ 0);\ \textcolor{comment}{//\ Initialize\ fire\ pins\ to\ low}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_direction(config.cont[i],\ GPIO\_MODE\_INPUT);\ \ \textcolor{comment}{//\ Set\ continuity\ pins\ as\ input}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_pull\_mode(config.cont[i],\ GPIO\_PULLUP\_ONLY);\ \textcolor{comment}{//\ Enable\ pull-\/up\ resistors\ on\ continuity\ pins}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classard_output_g_p_i_o_a6d5c05f04f843caf8d6902b6d21149d6}\index{ardOutputGPIO@{ardOutputGPIO}!checkContinuity@{checkContinuity}}
+\index{checkContinuity@{checkContinuity}!ardOutputGPIO@{ardOutputGPIO}}
+\doxysubsubsection{\texorpdfstring{checkContinuity()}{checkContinuity()}}
+{\footnotesize\ttfamily \label{classard_output_g_p_i_o_a6d5c05f04f843caf8d6902b6d21149d6} 
+std\+::array$<$ bool, 4 $>$ ard\+Output\+GPIO\+::check\+Continuity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check the continuity of the outputs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::array$<$bool, 4$>$ A array with the continuity status of each output
+\end{DoxyReturn}
+The array will contain true if there is continuity at the output, and false if there is not. \Hypertarget{classard_output_g_p_i_o_a56ba8b3fd0c01ce690aeb6c26872d7b4}\index{ardOutputGPIO@{ardOutputGPIO}!fire@{fire}}
+\index{fire@{fire}!ardOutputGPIO@{ardOutputGPIO}}
+\doxysubsubsection{\texorpdfstring{fire()}{fire()}}
+{\footnotesize\ttfamily \label{classard_output_g_p_i_o_a56ba8b3fd0c01ce690aeb6c26872d7b4} 
+esp\+\_\+err\+\_\+t ard\+Output\+GPIO\+::fire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ard__deployment_8h_a0d5bf0014cb0a1f121b08aef183dffc5}{Fire\+Pins}}}]{pin}{}\end{DoxyParamCaption})}
+
+
+
+Fire the specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The output number of the pin to fire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t Whether the operation succeeded or failed. 
+\end{DoxyReturn}
+\Hypertarget{classard_output_g_p_i_o_a91f5c8e98572c809484cca29713cab57}\index{ardOutputGPIO@{ardOutputGPIO}!fireStatus@{fireStatus}}
+\index{fireStatus@{fireStatus}!ardOutputGPIO@{ardOutputGPIO}}
+\doxysubsubsection{\texorpdfstring{fireStatus()}{fireStatus()}}
+{\footnotesize\ttfamily \label{classard_output_g_p_i_o_a91f5c8e98572c809484cca29713cab57} 
+std\+::array$<$ bool, 4 $>$ ard\+Output\+GPIO\+::fire\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check which pins have been fired. 
+
+\begin{DoxyReturn}{Returns}
+std\+::array$<$bool, 4$>$ A array with the staus of each output
+\end{DoxyReturn}
+The array will contain true if the pin has been fired since the instance was initialized, and false if it has not. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/\mbox{\hyperlink{ard__deployment_8h}{ard\+\_\+deployment.\+h}}\end{DoxyCompactItemize}

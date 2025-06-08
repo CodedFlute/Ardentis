@@ -1,0 +1,42 @@
+\doxysection{data\+\_\+struct.\+h}
+\hypertarget{data__struct_8h_source}{}\label{data__struct_8h_source}\index{main/data\_struct.h@{main/data\_struct.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_ard_data_struct}{ArdDataStruct}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ uint16\_t\ pressure;}
+\DoxyCodeLine{00007\ \ \ \ \ int32\_t\ latitude;}
+\DoxyCodeLine{00008\ \ \ \ \ int32\_t\ longitude;}
+\DoxyCodeLine{00009\ \ \ \ \ int16\_t\ horizAccuracy;}
+\DoxyCodeLine{00010\ \ \ \ \ int16\_t\ vertAccuracy;}
+\DoxyCodeLine{00011\ \ \ \ \ int16\_t\ temperature;}
+\DoxyCodeLine{00012\ \ \ \ \ int16\_t\ accelX;}
+\DoxyCodeLine{00013\ \ \ \ \ int16\_t\ accelY;}
+\DoxyCodeLine{00014\ \ \ \ \ int16\_t\ accelZ;}
+\DoxyCodeLine{00015\ \ \ \ \ int16\_t\ highAccelX;}
+\DoxyCodeLine{00016\ \ \ \ \ int16\_t\ highAccelY;}
+\DoxyCodeLine{00017\ \ \ \ \ int16\_t\ highAccelZ;}
+\DoxyCodeLine{00018\ \ \ \ \ int16\_t\ gyroX;}
+\DoxyCodeLine{00019\ \ \ \ \ int16\_t\ gyroY;}
+\DoxyCodeLine{00020\ \ \ \ \ int16\_t\ gyroZ;}
+\DoxyCodeLine{00021\ \ \ \ \ int16\_t\ altitude;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ cont1;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ cont2;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ cont3;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ cont4;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ fired\_1;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ fired\_2;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ fired\_3;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ fired\_4;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ uint16\_t\ getAltitude(\textcolor{keywordtype}{int}\ sea\_pressure)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Example\ calculation\ for\ altitude\ based\ on\ pressure}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Replace\ with\ your\ actual\ formula}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ((pow((sea\_pressure\ /\ pressure),\ 1/5.257)\ -\/\ 1.0)\ *\ (temperature\ +\ 273.15))\ /\ 0.0065;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \};}
+
+\end{DoxyCode}

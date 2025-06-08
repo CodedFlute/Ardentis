@@ -1,0 +1,21 @@
+\doxysection{ard\+\_\+radio\+\_\+packet\+\_\+spec.\+h}
+\hypertarget{ard__radio__packet__spec_8h_source}{}\label{ard__radio__packet__spec_8h_source}\index{main/ard\_radio\_packet\_spec.h@{main/ard\_radio\_packet\_spec.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ int32\_t\ latitude;}
+\DoxyCodeLine{00009\ \ \ \ \ int32\_t\ longitude;}
+\DoxyCodeLine{00010\ \ \ \ \ uint16\_t\ altitude;}
+\DoxyCodeLine{00011\ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ String\ createRadioPacket(\mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\&\ packet,\ String\&\ callsign,\ uint8\_t\ version);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\ parseRadioPacket(\textcolor{keyword}{const}\ String\&\ packetString);}
+
+\end{DoxyCode}

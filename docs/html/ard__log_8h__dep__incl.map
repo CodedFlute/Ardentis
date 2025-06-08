@@ -1,0 +1,13 @@
+<map id="main/ard_log.h" name="main/ard_log.h">
+<area shape="rect" id="Node000001" title="Logging library header for the Ardentis flight computer." alt="" coords="158,5,264,32"/>
+<area shape="rect" id="Node000002" href="$ard__log_8cpp.html" title="Logging library implementation for the Ardentis flight computer." alt="" coords="5,80,126,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,42,92,82,90,77,171,37"/>
+<area shape="rect" id="Node000003" href="$ard__radio_8cpp.html" title="Implementation code for the radio module for the Ardentis flight computer." alt="" coords="109,155,240,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,47,191,81,179,155,173,154,186,79,197,46"/>
+<area shape="rect" id="Node000004" href="$ard__radio_8h.html" title=" " alt="" coords="200,80,318,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="230,44,253,78,248,81,225,47"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title="Main file for the Ardentis flight computer code." alt="" coords="288,155,395,181"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="274,36,306,53,332,78,341,98,346,118,346,154,340,154,340,119,336,99,327,82,302,57,272,40"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="234,119,191,156,188,152,231,115"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="286,115,329,152,326,156,283,119"/>
+</map>

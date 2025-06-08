@@ -1,0 +1,44 @@
+\doxysection{ard\+\_\+deployment.\+h}
+\hypertarget{ard__deployment_8h_source}{}\label{ard__deployment_8h_source}\index{main/ard\_deployment.h@{main/ard\_deployment.h}}
+\mbox{\hyperlink{ard__deployment_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <driver/gpio.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <esp\_err.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <esp\_log.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structard_deploy_gpio_config}{ardDeployGpioConfig}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ gpio\_num\_t\ fire[4];}
+\DoxyCodeLine{00029\ \ \ \ \ gpio\_num\_t\ cont[4];}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{ard__deployment_8h_a0d5bf0014cb0a1f121b08aef183dffc5}{FirePins}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ Zero\ =\ 0,}
+\DoxyCodeLine{00039\ \ \ \ \ One\ =\ 1,}
+\DoxyCodeLine{00040\ \ \ \ \ Two\ =\ 2,}
+\DoxyCodeLine{00041\ \ \ \ \ Three\ =\ 3}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classard_output_g_p_i_o_af5d7ffdf0ecc5ad3016263c3491568ef}{ardOutputGPIO}}\ \{}
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classard_output_g_p_i_o_af5d7ffdf0ecc5ad3016263c3491568ef}{ardOutputGPIO}}(\mbox{\hyperlink{structard_deploy_gpio_config}{ardDeployGpioConfig}}\ config)\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ config\ =\ config;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ i++)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_direction(config.fire[i],\ GPIO\_MODE\_OUTPUT);\ \textcolor{comment}{//\ Set\ fire\ pins\ as\ output}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_level(config.fire[i],\ 0);\ \textcolor{comment}{//\ Initialize\ fire\ pins\ to\ low}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_direction(config.cont[i],\ GPIO\_MODE\_INPUT);\ \ \textcolor{comment}{//\ Set\ continuity\ pins\ as\ input}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_pull\_mode(config.cont[i],\ GPIO\_PULLUP\_ONLY);\ \textcolor{comment}{//\ Enable\ pull-\/up\ resistors\ on\ continuity\ pins}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ esp\_err\_t\ \mbox{\hyperlink{classard_output_g_p_i_o_a56ba8b3fd0c01ce690aeb6c26872d7b4}{fire}}(\mbox{\hyperlink{ard__deployment_8h_a0d5bf0014cb0a1f121b08aef183dffc5}{FirePins}}\ pin);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ \ \ std::array<bool,\ 4>\ \mbox{\hyperlink{classard_output_g_p_i_o_a6d5c05f04f843caf8d6902b6d21149d6}{checkContinuity}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00087\ \ \ \ \ std::array<bool,\ 4>\ \mbox{\hyperlink{classard_output_g_p_i_o_a91f5c8e98572c809484cca29713cab57}{fireStatus}}();}
+\DoxyCodeLine{00088\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{structard_deploy_gpio_config}{ardDeployGpioConfig}}\ config;}
+\DoxyCodeLine{00090\ \};}
+
+\end{DoxyCode}

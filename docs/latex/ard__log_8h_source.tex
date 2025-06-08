@@ -1,0 +1,41 @@
+\doxysection{ard\+\_\+log.\+h}
+\hypertarget{ard__log_8h_source}{}\label{ard__log_8h_source}\index{main/ard\_log.h@{main/ard\_log.h}}
+\mbox{\hyperlink{ard__log_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ard__log_8h_a2bcec6abac24273ae7d38f257f7d41b4}{ard\_logLevel\_t}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ LOG\_DISABLE\ =\ 0,}
+\DoxyCodeLine{00019\ \ \ \ \ LOG\_ERROR\ =\ 1,}
+\DoxyCodeLine{00020\ \ \ \ \ LOG\_WARN\ =\ 2,}
+\DoxyCodeLine{00021\ \ \ \ \ LOG\_INFO\ =\ 3,}
+\DoxyCodeLine{00022\ \ \ \ \ LOG\_DEBUG\ =\ 4,}
+\DoxyCodeLine{00023\ \ \ \ \ LOG\_VERBOSE\ =\ 5}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\_errorCode\_t}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ ERROR\_NONE\ =\ 0,}
+\DoxyCodeLine{00032\ \ \ \ \ ERROR\_GENERIC\ =\ -\/1}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classard_log_ad507fc97718884fc66cc277a97fb11f7}{ardLog}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classard_log_ad507fc97718884fc66cc277a97fb11f7}{ardLog}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ tag);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classard_log_ae2364ad34d04026ce29d15ab956e2163}{logLevel}}(\mbox{\hyperlink{ard__log_8h_a2bcec6abac24273ae7d38f257f7d41b4}{ard\_logLevel\_t}}\ level);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classard_log_a1c0218bd1d81dbb120a5ae3a8673f457}{error}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classard_log_a87f30c8bad8af9a94cb6d304d9a2f29f}{warn}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message);}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classard_log_a81fc429072ba5188b161dc1182ac77b9}{info}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message);}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classard_log_a6907ff72cbbe5cfe65d105567c1db062}{debug}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classard_log_a0026baac6c516895356df7ad25e6bd2b}{verb}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ TAG;}
+\DoxyCodeLine{00088\ \};}
+
+\end{DoxyCode}

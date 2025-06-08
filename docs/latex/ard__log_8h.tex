@@ -1,0 +1,97 @@
+\doxysection{main/ard\+\_\+log.h File Reference}
+\hypertarget{ard__log_8h}{}\label{ard__log_8h}\index{main/ard\_log.h@{main/ard\_log.h}}
+
+
+Logging library header for the Ardentis flight computer.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ard__log_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classard_log}{ard\+Log}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ard__log_8h_a2bcec6abac24273ae7d38f257f7d41b4}{ard\+\_\+log\+Level\+\_\+t}} \{ \newline
+{\bfseries LOG\+\_\+\+DISABLE} = 0
+, {\bfseries LOG\+\_\+\+ERROR} = 1
+, {\bfseries LOG\+\_\+\+WARN} = 2
+, {\bfseries LOG\+\_\+\+INFO} = 3
+, \newline
+{\bfseries LOG\+\_\+\+DEBUG} = 4
+, {\bfseries LOG\+\_\+\+VERBOSE} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Logging level enum type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\+\_\+error\+Code\+\_\+t}} \{ {\bfseries ERROR\+\_\+\+NONE} = 0
+, {\bfseries ERROR\+\_\+\+GENERIC} = -\/1
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration type for error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Logging library header for the Ardentis flight computer. 
+
+\begin{DoxyAuthor}{Author}
+Roland Neill 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1-\/alpha 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/28
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}\index{ard\_log.h@{ard\_log.h}!ard\_errorCode\_t@{ard\_errorCode\_t}}
+\index{ard\_errorCode\_t@{ard\_errorCode\_t}!ard\_log.h@{ard\_log.h}}
+\doxysubsubsection{\texorpdfstring{ard\_errorCode\_t}{ard\_errorCode\_t}}
+{\footnotesize\ttfamily \label{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470} 
+enum \mbox{\hyperlink{ard__log_8h_ab24eeb30e1bc9136bb3054df8c6e1470}{ard\+\_\+error\+Code\+\_\+t}}}
+
+
+
+Enumeration type for error codes. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ ERROR\_NONE\ =\ 0,}
+\DoxyCodeLine{00032\ \ \ \ \ ERROR\_GENERIC\ =\ -\/1}
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}
+\Hypertarget{ard__log_8h_a2bcec6abac24273ae7d38f257f7d41b4}\index{ard\_log.h@{ard\_log.h}!ard\_logLevel\_t@{ard\_logLevel\_t}}
+\index{ard\_logLevel\_t@{ard\_logLevel\_t}!ard\_log.h@{ard\_log.h}}
+\doxysubsubsection{\texorpdfstring{ard\_logLevel\_t}{ard\_logLevel\_t}}
+{\footnotesize\ttfamily \label{ard__log_8h_a2bcec6abac24273ae7d38f257f7d41b4} 
+enum \mbox{\hyperlink{ard__log_8h_a2bcec6abac24273ae7d38f257f7d41b4}{ard\+\_\+log\+Level\+\_\+t}}}
+
+
+
+Logging level enum type. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ LOG\_DISABLE\ =\ 0,}
+\DoxyCodeLine{00019\ \ \ \ \ LOG\_ERROR\ =\ 1,}
+\DoxyCodeLine{00020\ \ \ \ \ LOG\_WARN\ =\ 2,}
+\DoxyCodeLine{00021\ \ \ \ \ LOG\_INFO\ =\ 3,}
+\DoxyCodeLine{00022\ \ \ \ \ LOG\_DEBUG\ =\ 4,}
+\DoxyCodeLine{00023\ \ \ \ \ LOG\_VERBOSE\ =\ 5}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

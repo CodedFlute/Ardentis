@@ -1,0 +1,324 @@
+(footprint "SON50P250X250X80-11N-D"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "W-Type 10L DFN 2.5x2.5 Package")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "252595cc-ffc2-49ca-88f0-190d3ec15298")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "RT6150B-33GQW"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "40cd3f68-0972-495a-9f55-682a8f10fc11")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://datasheet.octopart.com/RT6150B-33GQW-Richtek-datasheet-82510503.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4b398d1e-b73f-4458-bdb9-75e0405d84a0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "IC REG BCK BST 3.3V 800MA 10WDFN"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d5b9c529-2937-42d6-ae6f-a7dfe10df676")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "0.8"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae23ab05-a13e-4252-8c82-d0e26f650c1b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "835-RT6150B-33GQW"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e2534281-be08-4081-b185-4f54bdace681")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Richtek/RT6150B-33GQW?qs=amGC7iS6iy8r3kS79wnzgg%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "07c9b264-2858-4657-9963-58edfe802492")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "RICHTEK"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "86352381-5a5e-4f15-ba9f-b7a0706c8e10")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "RT6150B-33GQW"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7183bc8e-debd-4290-8645-2c4ca0b5c09f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Price" "4.35"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c5417356-5a06-4f4a-871e-8c596ea5d3c3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_circle
+		(center -1.65 -1.65)
+		(end -1.65 -1.525)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "83c52f8a-5ec7-44da-868f-74e42b5e36f0")
+	)
+	(fp_line
+		(start -1.875 -1.55)
+		(end 1.875 -1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "44d4e779-2adf-4405-9451-d293345c0ce6")
+	)
+	(fp_line
+		(start -1.875 1.55)
+		(end -1.875 -1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b4eb1d52-f082-4e18-9114-16af16536e0e")
+	)
+	(fp_line
+		(start 1.875 -1.55)
+		(end 1.875 1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d2ea95e6-0cb3-484f-bd18-8742a3d5ff30")
+	)
+	(fp_line
+		(start 1.875 1.55)
+		(end -1.875 1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9dee5190-03bd-4ef6-bc8a-37d2a62f2224")
+	)
+	(fp_line
+		(start -1.25 -1.25)
+		(end 1.25 -1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "96888119-8ad8-4a30-9394-e9b933d73c2d")
+	)
+	(fp_line
+		(start -1.25 -0.625)
+		(end -0.625 -1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a25ddf56-f7e9-4f39-848e-183604c195d7")
+	)
+	(fp_line
+		(start -1.25 1.25)
+		(end -1.25 -1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fbe46684-b40e-4e1c-a202-9da9e9c36a31")
+	)
+	(fp_line
+		(start 1.25 -1.25)
+		(end 1.25 1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "71a42a2a-e760-4627-9a20-02f79fe81519")
+	)
+	(fp_line
+		(start 1.25 1.25)
+		(end -1.25 1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ed6846f7-3e93-4d1e-a8c0-8707cbee4485")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "f1b180a3-9a3f-455d-a80a-71eca1b8d847")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.25 -1 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "eceeba7d-1a10-49e0-b82d-aa7d3fe3c3f9")
+	)
+	(pad "2" smd rect
+		(at -1.25 -0.5 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3849251d-aafc-4694-ad3a-6670619edfa9")
+	)
+	(pad "3" smd rect
+		(at -1.25 0 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6a0e153f-89f6-4082-836f-29621744ecb6")
+	)
+	(pad "4" smd rect
+		(at -1.25 0.5 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "cfeba795-4d76-4c9e-b69e-c192422fa23c")
+	)
+	(pad "5" smd rect
+		(at -1.25 1 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ead5e9b3-cad4-41cf-97b5-06a862b7edd4")
+	)
+	(pad "6" smd rect
+		(at 1.25 1 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1a403af9-5ca3-4c6f-b269-0c5fd0f20cea")
+	)
+	(pad "7" smd rect
+		(at 1.25 0.5 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7abe2f39-994f-4882-b42c-462529817352")
+	)
+	(pad "8" smd rect
+		(at 1.25 0 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fdbc4b8a-4f7f-46cd-8cc3-a6da0dede490")
+	)
+	(pad "9" smd rect
+		(at 1.25 -0.5 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "cad6ff02-d607-4128-819f-87ef3a5001f9")
+	)
+	(pad "10" smd rect
+		(at 1.25 -1 90)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a787817a-71a2-4667-8130-1d1faa425937")
+	)
+	(pad "11" smd rect
+		(at 0 0)
+		(size 1.25 2.05)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8891f28d-689e-416b-99ce-21389da3d3fb")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/Roland/Documents/KiCad/9.0/3dmodels/RT6150B-33GQW.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

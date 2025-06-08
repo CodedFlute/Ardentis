@@ -1,0 +1,399 @@
+\doxysection{main/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main/main.cpp@{main/main.cpp}}
+
+
+Main file for the Ardentis flight computer code.  
+
+
+{\ttfamily \#include "{}pins.\+h"{}}\newline
+{\ttfamily \#include "{}fire\+\_\+modes.\+hpp"{}}\newline
+{\ttfamily \#include "{}Radio\+Parameters.\+h"{}}\newline
+{\ttfamily \#include "{}ard\+\_\+radio.\+h"{}}\newline
+{\ttfamily \#include "{}data\+\_\+struct.\+h"{}}\newline
+{\ttfamily \#include "{}ard\+\_\+deployment.\+h"{}}\newline
+{\ttfamily \#include "{}ard\+\_\+log.\+h"{}}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$FS.\+h$>$}\newline
+{\ttfamily \#include $<$Little\+FS.\+h$>$}\newline
+{\ttfamily \#include $<$SD.\+h$>$}\newline
+{\ttfamily \#include $<$Preferences.\+h$>$}\newline
+{\ttfamily \#include "{}ard\+\_\+sensor.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a94b7c389e4d61e6c9d8d34356c7919e8}{tx\+Callback}} (void)
+\item 
+void \mbox{\hyperlink{main_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{setup}} (void)
+\item 
+void \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structard___radio_config__t}{ard\+\_\+\+Radio\+Config\+\_\+t}} \mbox{\hyperlink{main_8cpp_ae75c26b3f0347f4abceb163265d2faf4}{radio\+Config}}
+\item 
+\mbox{\hyperlink{structard___radio_pins__t}{ard\+\_\+\+Radio\+Pins\+\_\+t}} \mbox{\hyperlink{main_8cpp_a52c567d1d8398c2a5f2574ccd2ab895a}{radio\+Pins}}
+\item 
+\Hypertarget{main_8cpp_a77cac75281a97328ac564439a9b0cf8b}\label{main_8cpp_a77cac75281a97328ac564439a9b0cf8b} 
+\mbox{\hyperlink{classard_radio}{ard\+Radio}} {\bfseries radio} (radio\+Pins)
+\item 
+\Hypertarget{main_8cpp_aad04a79c69ec7291bddad0a204786f01}\label{main_8cpp_aad04a79c69ec7291bddad0a204786f01} 
+const char \texorpdfstring{$\ast$}{*} {\bfseries main\+\_\+\+TAG} = "{}Main"{}
+\item 
+\Hypertarget{main_8cpp_ae2010c70c13130ab37e62d54d19845a8}\label{main_8cpp_ae2010c70c13130ab37e62d54d19845a8} 
+\mbox{\hyperlink{classard_log}{ard\+Log}} {\bfseries main\+\_\+log} (main\+\_\+\+TAG)
+\item 
+\Hypertarget{main_8cpp_a0c701261da8421398e78be7f85026d00}\label{main_8cpp_a0c701261da8421398e78be7f85026d00} 
+\mbox{\hyperlink{classard_sensors}{ard\+Sensors}} {\bfseries sensors} (ARD\+\_\+\+SDA, ARD\+\_\+\+SCL, 1, ARD\+\_\+\+GPS\+\_\+\+UART, ARD\+\_\+\+GPS\+\_\+\+TX, ARD\+\_\+\+GPS\+\_\+\+RX)
+\item 
+\Hypertarget{main_8cpp_a73eb8317f42311b30515bf4012193359}\label{main_8cpp_a73eb8317f42311b30515bf4012193359} 
+File {\bfseries flight\+Log}
+\item 
+\Hypertarget{main_8cpp_a7c230fb3ef401aa42442d542049509f7}\label{main_8cpp_a7c230fb3ef401aa42442d542049509f7} 
+bool {\bfseries fire\+\_\+signal\+\_\+1} = false
+\item 
+\Hypertarget{main_8cpp_ae32a1f12a67abae03c91b6fd0479cda8}\label{main_8cpp_ae32a1f12a67abae03c91b6fd0479cda8} 
+bool {\bfseries fire\+\_\+signal\+\_\+2} = false
+\item 
+\Hypertarget{main_8cpp_afc17a94162fa06098708ed8d5ee6bbbb}\label{main_8cpp_afc17a94162fa06098708ed8d5ee6bbbb} 
+bool {\bfseries fire\+\_\+signal\+\_\+3} = false
+\item 
+\Hypertarget{main_8cpp_aea251a0c4b89c2c59db708729e85a291}\label{main_8cpp_aea251a0c4b89c2c59db708729e85a291} 
+bool {\bfseries fire\+\_\+signal\+\_\+4} = false
+\item 
+\Hypertarget{main_8cpp_a0f1c1cf688b55f3ba4a040ec13639f54}\label{main_8cpp_a0f1c1cf688b55f3ba4a040ec13639f54} 
+bool {\bfseries continuity\+\_\+1} = false
+\item 
+\Hypertarget{main_8cpp_a0fd7d48fd0bf9155099ea51ba4eb4e94}\label{main_8cpp_a0fd7d48fd0bf9155099ea51ba4eb4e94} 
+bool {\bfseries continuity\+\_\+2} = false
+\item 
+\Hypertarget{main_8cpp_ab703c208b47706aad98bdf1a85634883}\label{main_8cpp_ab703c208b47706aad98bdf1a85634883} 
+bool {\bfseries continuity\+\_\+3} = false
+\item 
+\Hypertarget{main_8cpp_a86106782c4af95724364d1ba028722bf}\label{main_8cpp_a86106782c4af95724364d1ba028722bf} 
+bool {\bfseries continuity\+\_\+4} = false
+\item 
+\Hypertarget{main_8cpp_a732fb02924cb0e2218d5094c2c5fc545}\label{main_8cpp_a732fb02924cb0e2218d5094c2c5fc545} 
+bool {\bfseries apogee} = false
+\item 
+\Hypertarget{main_8cpp_a69cdbf327e1ec7ae957b431b74d5e932}\label{main_8cpp_a69cdbf327e1ec7ae957b431b74d5e932} 
+uint16\+\_\+t {\bfseries time\+\_\+since\+\_\+apogee} = 0
+\item 
+\Hypertarget{main_8cpp_a51661d189e8db74a32867069dfa50d7f}\label{main_8cpp_a51661d189e8db74a32867069dfa50d7f} 
+uint16\+\_\+t {\bfseries altitude} = 0
+\item 
+\Hypertarget{main_8cpp_adb7c0c50ea3a213314dcda50d70e65b3}\label{main_8cpp_adb7c0c50ea3a213314dcda50d70e65b3} 
+bool {\bfseries descending} = false
+\item 
+\Hypertarget{main_8cpp_a8ea27602bf4d3ec3850549a2d313ad0c}\label{main_8cpp_a8ea27602bf4d3ec3850549a2d313ad0c} 
+bool {\bfseries ascending} = false
+\item 
+\Hypertarget{main_8cpp_af477912513bde2ceb50583d4ace50e23}\label{main_8cpp_af477912513bde2ceb50583d4ace50e23} 
+uint16\+\_\+t {\bfseries time\+\_\+since\+\_\+liftoff} = 0
+\item 
+\Hypertarget{main_8cpp_ada4b0d2294a1480cf9330b45bb5752f0}\label{main_8cpp_ada4b0d2294a1480cf9330b45bb5752f0} 
+int {\bfseries ref\+\_\+pressure} = 101325
+\item 
+\Hypertarget{main_8cpp_addd29491336bdb1ec1269ace1921f2db}\label{main_8cpp_addd29491336bdb1ec1269ace1921f2db} 
+uint8\+\_\+t {\bfseries fire\+\_\+1\+\_\+mode} = ARD\+\_\+\+FIRE\+\_\+\+INACTIVE
+\item 
+\Hypertarget{main_8cpp_a086adec30975fe9cccf45d567699a616}\label{main_8cpp_a086adec30975fe9cccf45d567699a616} 
+uint8\+\_\+t {\bfseries fire\+\_\+1\+\_\+param} = 0
+\item 
+\Hypertarget{main_8cpp_a7f0e5c0d7dac8a71f9e4bcb3d883402e}\label{main_8cpp_a7f0e5c0d7dac8a71f9e4bcb3d883402e} 
+uint8\+\_\+t {\bfseries fire\+\_\+2\+\_\+mode} = ARD\+\_\+\+FIRE\+\_\+\+INACTIVE
+\item 
+\Hypertarget{main_8cpp_a0d25b4249b97db6a9294d6f499f28dd8}\label{main_8cpp_a0d25b4249b97db6a9294d6f499f28dd8} 
+uint8\+\_\+t {\bfseries fire\+\_\+2\+\_\+param} = 0
+\item 
+\Hypertarget{main_8cpp_a24e87c1bede4601685101da8ee550b3d}\label{main_8cpp_a24e87c1bede4601685101da8ee550b3d} 
+uint8\+\_\+t {\bfseries fire\+\_\+3\+\_\+mode} = ARD\+\_\+\+FIRE\+\_\+\+INACTIVE
+\item 
+\Hypertarget{main_8cpp_a315be1fc037d6584940728a102a34132}\label{main_8cpp_a315be1fc037d6584940728a102a34132} 
+uint8\+\_\+t {\bfseries fire\+\_\+3\+\_\+param} = 0
+\item 
+\Hypertarget{main_8cpp_ad909b603d34e2fb4376f3131b0376c27}\label{main_8cpp_ad909b603d34e2fb4376f3131b0376c27} 
+uint8\+\_\+t {\bfseries fire\+\_\+4\+\_\+mode} = ARD\+\_\+\+FIRE\+\_\+\+INACTIVE
+\item 
+\Hypertarget{main_8cpp_a9d2d87aec547e136613b10f595686e15}\label{main_8cpp_a9d2d87aec547e136613b10f595686e15} 
+uint8\+\_\+t {\bfseries fire\+\_\+4\+\_\+param} = 0
+\item 
+\Hypertarget{main_8cpp_a0e69f178b7968bba4c71ffd2534917d2}\label{main_8cpp_a0e69f178b7968bba4c71ffd2534917d2} 
+uint8\+\_\+t {\bfseries fire\+\_\+1\+\_\+altitude} = 0
+\item 
+\Hypertarget{main_8cpp_a60d58f870e209d51c61f0890aa06fb70}\label{main_8cpp_a60d58f870e209d51c61f0890aa06fb70} 
+uint8\+\_\+t {\bfseries fire\+\_\+2\+\_\+altitude} = 0
+\item 
+\Hypertarget{main_8cpp_a8b532886584712aa1f5cb5d08452d682}\label{main_8cpp_a8b532886584712aa1f5cb5d08452d682} 
+uint8\+\_\+t {\bfseries fire\+\_\+3\+\_\+altitude} = 0
+\item 
+\Hypertarget{main_8cpp_ab1f3a0b6aa534a54086b55307599c9fa}\label{main_8cpp_ab1f3a0b6aa534a54086b55307599c9fa} 
+uint8\+\_\+t {\bfseries fire\+\_\+4\+\_\+altitude} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main file for the Ardentis flight computer code. 
+
+\begin{DoxyAuthor}{Author}
+Roland Neill 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1-\/alpha 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/25
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\index{main.cpp@{main.cpp}!loop@{loop}}
+\index{loop@{loop}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{main_8cpp_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{struct_ard_data_struct}{ArdDataStruct}}\ data;}
+\DoxyCodeLine{00163\ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ sensors.update();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Check\ Continuity}}
+\DoxyCodeLine{00169\ \ \ \ \ data.cont1\ =\ digitalRead(ARD\_CONT1);}
+\DoxyCodeLine{00170\ \ \ \ \ data.cont2\ =\ digitalRead(ARD\_CONT2);}
+\DoxyCodeLine{00171\ \ \ \ \ data.cont3\ =\ digitalRead(ARD\_CONT3);}
+\DoxyCodeLine{00172\ \ \ \ \ data.cont4\ =\ digitalRead(ARD\_CONT4);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ 4;\ i++)\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ uint8\_t\ fire\_mode\ =\ 0;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ uint16\_t\ fire\_param\ =\ 0;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}*\ fire\_signal\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}*\ data\_signal\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (i)\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_mode\ =\ fire\_1\_mode;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_param\ =\ fire\_1\_param;}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_signal\ =\ \&fire\_signal\_1;}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ data\_signal\ =\ \&data.fired\_1;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_mode\ =\ fire\_2\_mode;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_param\ =\ fire\_2\_param;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_signal\ =\ \&fire\_signal\_2;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ data\_signal\ =\ \&data.fired\_2;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_mode\ =\ fire\_3\_mode;}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_param\ =\ fire\_3\_param;}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_signal\ =\ \&fire\_signal\_3;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ data\_signal\ =\ \&data.fired\_3;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_mode\ =\ fire\_4\_mode;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_param\ =\ fire\_4\_param;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ fire\_signal\ =\ \&fire\_signal\_4;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ data\_signal\ =\ \&data.fired\_4;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ fire\ mode\ is\ active}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fire\_mode\ ==\ 1)\ \{\ \textcolor{comment}{//\ Fire\ at\ apogee}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (apogee\ ==\ \textcolor{keyword}{true}\ \&\&\ time\_since\_apogee\ >\ fire\_param)\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *fire\_signal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *data\_signal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *fire\_signal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (fire\_mode\ ==\ 2)\ \{\ \textcolor{comment}{//\ Fire\ at\ or\ below\ set\ altitude\ on\ descent}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ *fire\_signal\ =\ (altitude\ <=\ fire\_param)\ \&\&\ (descending\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (fire\_mode\ ==\ 3)\ \{\ \textcolor{comment}{//\ Fire\ at\ or\ above\ set\ altitude\ on\ ascent}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ *fire\_signal\ =\ (altitude\ >=\ fire\_param)\ \&\&\ (ascending\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (fire\_mode\ ==\ 4)\ \{\ \textcolor{comment}{//\ Fire\ at\ set\ time\ after\ liftoff}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ *fire\_signal\ =\ time\_since\_apogee\ >\ fire\_param;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ *fire\_signal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ \}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{if}\ (!radio.busy)\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_radio_packet}{RadioPacket}}\ radioPacket;}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ strncpy(radioPacket.callsign,\ \textcolor{stringliteral}{"{}VE3FSZ"{}},\ \textcolor{keyword}{sizeof}(radioPacket.callsign)\ -\/\ 1);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ radioPacket.callsign[\textcolor{keyword}{sizeof}(radioPacket.callsign)\ -\/\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ radioPacket.latitude\ =\ data.latitude;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ radioPacket.longitude\ =\ data.longitude;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ radioPacket.altitude\ =\ data.altitude;}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ radio.sendData(radioPacket);}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}[RADIO]\ Sending\ packet"{}}));}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fire\_signal\_1)\ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}[OUTPUT]\ Firing\ Output\ 1."{}});}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ digitalWrite(ARD\_FIRE1,\ LOW);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ delay(1000);}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ digitalWrite(ARD\_FIRE1,\ HIGH);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \}}
+
+\end{DoxyCode}
+\Hypertarget{main_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}\index{main.cpp@{main.cpp}!setup@{setup}}
+\index{setup@{setup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{main_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f} 
+void setup (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ Serial.begin(115200);}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{while}\ (!Serial)\ delay(10);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ radio.begin(radioConfig);}
+\DoxyCodeLine{00112\ \ \ \ \ radio.setTxInt(txCallback);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{if}\ (sensors.initSensors(0x18,\ 0x68,\ 0x77,\ ARD\_GPS\_BAUD)\ !=\ ERROR\_NONE)\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ main\_log.error(\textcolor{stringliteral}{"{}Sensor\ initialization\ failed."{}});}
+\DoxyCodeLine{00116\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ main\_log.info(\textcolor{stringliteral}{"{}Sensor\ initialization\ successful."{}});}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ SD\ Card\ Setup}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (!SD.begin(4))\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}[ERROR]\ SD\ initialization\ failed!"{}});}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (1);}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}[SD]\ initialization\ done."{}});}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ flightLog\ =\ SD.open(\textcolor{stringliteral}{"{}flight.log"{}},\ FILE\_WRITE);}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordflow}{if}\ (flightLog)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ Serial.print(\textcolor{stringliteral}{"{}[SD]\ Writing\ to\ flight.log..."{}});}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ flightLog.println(\textcolor{stringliteral}{"{}testing\ 1,\ 2,\ 3."{}});}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ close\ the\ file:}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ flightLog.close();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}[SD]\ Done\ writing\ to\ flight.log"{}});}
+\DoxyCodeLine{00135\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ file\ didn't\ open,\ print\ an\ error:}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}[ERROR]\ Error\ opening\ flight.log"{}});}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ Initialize\ Fire\ Output\ GPIOs}}
+\DoxyCodeLine{00142\ \ \ \ \ pinMode(ARD\_FIRE1,\ OUTPUT);}
+\DoxyCodeLine{00143\ \ \ \ \ digitalWrite(ARD\_FIRE1,\ HIGH);}
+\DoxyCodeLine{00144\ \ \ \ \ pinMode(ARD\_FIRE2,\ OUTPUT);}
+\DoxyCodeLine{00145\ \ \ \ \ digitalWrite(ARD\_FIRE2,\ HIGH);}
+\DoxyCodeLine{00146\ \ \ \ \ pinMode(ARD\_FIRE3,\ OUTPUT);}
+\DoxyCodeLine{00147\ \ \ \ \ digitalWrite(ARD\_FIRE3,\ HIGH);}
+\DoxyCodeLine{00148\ \ \ \ \ pinMode(ARD\_FIRE4,\ OUTPUT);}
+\DoxyCodeLine{00149\ \ \ \ \ digitalWrite(ARD\_FIRE4,\ HIGH);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ pinMode(ARD\_CONT1,\ INPUT\_PULLUP);}
+\DoxyCodeLine{00152\ \ \ \ \ pinMode(ARD\_CONT2,\ INPUT\_PULLUP);}
+\DoxyCodeLine{00153\ \ \ \ \ pinMode(ARD\_CONT3,\ INPUT\_PULLUP);}
+\DoxyCodeLine{00154\ \ \ \ \ pinMode(ARD\_CONT4,\ INPUT\_PULLUP);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}[OUTPUT]\ Output\ GPIOs\ initialized."{}});}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{main_8cpp_a94b7c389e4d61e6c9d8d34356c7919e8}\index{main.cpp@{main.cpp}!txCallback@{txCallback}}
+\index{txCallback@{txCallback}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{txCallback()}{txCallback()}}
+{\footnotesize\ttfamily \label{main_8cpp_a94b7c389e4d61e6c9d8d34356c7919e8} 
+void tx\+Callback (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Callback\ function\ for\ when\ the\ radio\ is\ done\ transmitting}}
+\DoxyCodeLine{00052\ \ \ \ \ radio.doneTX();}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_ae75c26b3f0347f4abceb163265d2faf4}\index{main.cpp@{main.cpp}!radioConfig@{radioConfig}}
+\index{radioConfig@{radioConfig}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{radioConfig}{radioConfig}}
+{\footnotesize\ttfamily \label{main_8cpp_ae75c26b3f0347f4abceb163265d2faf4} 
+\mbox{\hyperlink{structard___radio_config__t}{ard\+\_\+\+Radio\+Config\+\_\+t}} radio\+Config}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_FREQ,}
+\DoxyCodeLine{\ \ \ \ ARD\_LORA\_BW,}
+\DoxyCodeLine{\ \ \ \ ARD\_LORA\_SF,}
+\DoxyCodeLine{\ \ \ \ ARD\_LORA\_CR,}
+\DoxyCodeLine{\ \ \ \ ARD\_LORA\_SYNCWORD,}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_TX\_PWR}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ ARD\_RADIO\_FREQ,}
+\DoxyCodeLine{00021\ \ \ \ \ ARD\_LORA\_BW,}
+\DoxyCodeLine{00022\ \ \ \ \ ARD\_LORA\_SF,}
+\DoxyCodeLine{00023\ \ \ \ \ ARD\_LORA\_CR,}
+\DoxyCodeLine{00024\ \ \ \ \ ARD\_LORA\_SYNCWORD,}
+\DoxyCodeLine{00025\ \ \ \ \ ARD\_RADIO\_TX\_PWR}
+\DoxyCodeLine{00026\ \};}
+
+\end{DoxyCode}
+\Hypertarget{main_8cpp_a52c567d1d8398c2a5f2574ccd2ab895a}\index{main.cpp@{main.cpp}!radioPins@{radioPins}}
+\index{radioPins@{radioPins}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{radioPins}{radioPins}}
+{\footnotesize\ttfamily \label{main_8cpp_a52c567d1d8398c2a5f2574ccd2ab895a} 
+\mbox{\hyperlink{structard___radio_pins__t}{ard\+\_\+\+Radio\+Pins\+\_\+t}} radio\+Pins}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_NSS,}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_BUSY,}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_NRST,}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_DIO1,}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_SPI\_MISO,}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_SPI\_MOSI,}
+\DoxyCodeLine{\ \ \ \ ARD\_RADIO\_SPI\_SCK}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ ARD\_RADIO\_NSS,}
+\DoxyCodeLine{00029\ \ \ \ \ ARD\_RADIO\_BUSY,}
+\DoxyCodeLine{00030\ \ \ \ \ ARD\_RADIO\_NRST,}
+\DoxyCodeLine{00031\ \ \ \ \ ARD\_RADIO\_DIO1,}
+\DoxyCodeLine{00032\ \ \ \ \ ARD\_RADIO\_SPI\_MISO,}
+\DoxyCodeLine{00033\ \ \ \ \ ARD\_RADIO\_SPI\_MOSI,}
+\DoxyCodeLine{00034\ \ \ \ \ ARD\_RADIO\_SPI\_SCK}
+\DoxyCodeLine{00035\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,2 @@
+COMPONENT_SRCDIRS := SparkFun_u-blox_GNSS_v3
+COMPONENT_ADD_INCLUDEDIRS := SparkFun_u-blox_GNSS_v3

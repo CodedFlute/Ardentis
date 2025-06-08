@@ -1,0 +1,5 @@
+<map id="ardSensors" name="ardSensors">
+<area shape="rect" id="Node000001" title="ardSensors class to manage sensor data acquisition and processing" alt="" coords="9,256,97,283"/>
+<area shape="rect" id="Node000002" href="$structard_data_field.html" title="ardDataField structure to hold sensor data and timestamp" alt="" coords="5,5,101,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,48,56,256,50,256,50,48"/>
+</map>
